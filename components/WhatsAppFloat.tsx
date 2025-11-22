@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 export default function WhatsAppFloat() {
   const [isVisible, setIsVisible] = useState(false);
-  const whatsappNumber = "919876543210"; // Replace with your WhatsApp number (include country code without +)
+  const whatsappNumber = "917337420588"; // WhatsApp number with country code
   const message = "Hi! I'm interested in your marketing services.";
 
   useEffect(() => {
