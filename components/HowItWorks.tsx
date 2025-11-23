@@ -56,7 +56,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="w-full bg-gradient-to-b from-blue-50/20 via-white to-gray-50/30 py-20 md:py-32">
+    <section id="how-it-works" className="w-full bg-gradient-to-b from-white via-gray-50/60 to-white py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div

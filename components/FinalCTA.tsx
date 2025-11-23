@@ -4,11 +4,11 @@ export default function FinalCTA() {
   // Consolidated primary conversion now points to /contact page.
 
   return (
-    <section id="audit" className="w-full bg-gradient-to-br from-brand via-blue-600 to-blue-800 py-20 md:py-32 relative overflow-hidden">
+    <section id="audit" className="w-full bg-gradient-to-b from-white via-blue-50/40 to-white py-20 md:py-32 relative overflow-hidden">
       
       {/* Subtle glow effects */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+      {/* removed indigo blob to comply with locked palette */}
 
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         

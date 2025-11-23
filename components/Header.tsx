@@ -78,7 +78,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
             href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20your%20marketing%20services."
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 bg-brand text-white px-5 py-2 rounded-md text-sm font-semibold hover:bg-blue-600 transition-colors shadow-sm hover:shadow-md"
+            className="ml-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white px-5 py-2 rounded-md text-sm font-semibold transition-colors shadow-sm hover:shadow-md"
           >
             Chat Now
           </a>
@@ -127,7 +127,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
                 onOpenContact();
                 setIsOpen(false);
               }}
-              className="block w-full text-center bg-brand text-white px-4 py-3 rounded-md text-sm font-semibold hover:bg-blue-600 transition-colors shadow-sm hover:shadow-md"
+              className="block w-full text-center bg-[#3B82F6] hover:bg-[#2563EB] text-white px-4 py-3 rounded-md text-sm font-semibold transition-colors shadow-sm hover:shadow-md"
             >
               Book A Call
             </button>

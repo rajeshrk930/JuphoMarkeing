@@ -42,7 +42,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="w-full bg-gradient-to-b from-white via-gray-50/50 to-blue-50/30 py-20 md:py-32">
+    <section id="services" className="w-full bg-gradient-to-b from-white via-blue-50/40 to-white py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
@@ -63,14 +63,14 @@ export default function Services() {
               className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-brand/30 flex flex-col hover:-translate-y-2"
             >
               {/* Top accent gradient */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-blue-600 to-indigo-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-teal-500 to-brand-secondary rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Content */}
               <div className="flex-1 space-y-5 mt-2">
                 {/* Icon with background glow */}
                 <div className="relative w-20 h-20 mb-4">
                   <div className="absolute inset-0 bg-brand/10 rounded-2xl blur-xl group-hover:bg-brand/20 transition-all duration-500" />
-                  <div className="relative w-full h-full bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 group-hover:scale-110 transition-transform duration-500">
+                  <div className="relative w-full h-full bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-4 group-hover:scale-110 transition-transform duration-500">
                     <Image 
                       src={service.icon} 
                       alt={`${service.title} icon`}

@@ -14,7 +14,14 @@ html {
 
 /* Small helper classes used in components */
 .btn-primary {
-	@apply bg-brand text-white rounded-md px-4 py-2 inline-block;
+  background-color: #3B82F6;
+  color: #ffffff;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background-color: #2563EB;
 }
 
 /* Animation keyframes for form feedback */

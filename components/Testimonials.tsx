@@ -36,7 +36,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="reviews" className="w-full bg-gradient-to-br from-gray-50 to-blue-50/30 py-20 md:py-32 relative overflow-hidden">
+    <section id="reviews" className="w-full bg-gradient-to-b from-[#F0FDFC] to-white py-20 md:py-32 relative overflow-hidden">
       
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -66,12 +66,12 @@ export default function Testimonials() {
               className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-brand/30 flex flex-col hover:-translate-y-2"
             >
               {/* Top accent gradient */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-blue-600 to-indigo-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-teal-500 to-brand-secondary rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Quote Icon with glow */}
               <div className="relative mb-6">
                 <div className="absolute inset-0 bg-brand/5 rounded-2xl blur-xl group-hover:bg-brand/10 transition-all duration-500" />
-                <div className="relative w-20 h-20 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 group-hover:scale-110 transition-transform duration-500 flex items-center justify-center">
+                <div className="relative w-20 h-20 bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-4 group-hover:scale-110 transition-transform duration-500 flex items-center justify-center">
                   <Image 
                     src="/quote.png" 
                     alt="Quote icon"

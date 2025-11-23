@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenContact }: HeroProps) {
   return (
-    <section className="w-full bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/40">
+    <section className="w-full bg-gradient-to-br from-white via-teal-50/40 to-white">
       <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
         <div className="text-center space-y-8">
 
@@ -69,7 +69,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 onClick={onOpenContact}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 bg-brand text-white px-10 py-5 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white px-10 py-5 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Book A Call
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
