@@ -1,11 +1,9 @@
 import React from "react";
-import Image from "next/image";
 
 export default function Services() {
   const services = [
     {
       title: "Meta Ads",
-      icon: "/metaads-2.png",
       benefits: [
         "Advanced campaign optimization and audience targeting",
         "Data-driven strategies that maximize ROAS",
@@ -14,7 +12,6 @@ export default function Services() {
     },
     {
       title: "Brand Strategy",
-      icon: "/brand-2.png",
       benefits: [
         "Comprehensive brand positioning and messaging",
         "Market research and competitor analysis",
@@ -23,7 +20,6 @@ export default function Services() {
     },
     {
       title: "Design",
-      icon: "/design-2.png",
       benefits: [
         "Creative ad designs that capture attention",
         "Brand-consistent visual assets across platforms",
@@ -32,7 +28,6 @@ export default function Services() {
     },
     {
       title: "Automation",
-      icon: "/automation-2.png",
       benefits: [
         "Automated lead qualification and nurturing",
         "WhatsApp and email marketing workflows",
@@ -40,6 +35,45 @@ export default function Services() {
       ]
     }
   ];
+
+  const renderIcon = (title: string) => {
+    switch (title) {
+      case "Meta Ads":
+        return (
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="3" y="4" width="18" height="14" rx="2" stroke="#14B8A6" strokeWidth="2" />
+            <path d="M3 8h18" stroke="#3B82F6" strokeWidth="2" />
+            <circle cx="12" cy="13" r="3" stroke="#3B82F6" strokeWidth="2" />
+            <path d="M16 17l3 3" stroke="#14B8A6" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        );
+      case "Brand Strategy":
+        return (
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M4 4h16v16H4z" stroke="#14B8A6" strokeWidth="2" />
+            <path d="M7 14l3-3 2 2 5-5" stroke="#3B82F6" strokeWidth="2" fill="none" />
+            <path d="M7 18h10" stroke="#14B8A6" strokeWidth="2" />
+          </svg>
+        );
+      case "Design":
+        return (
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M12 2l4 4-8 8-4 1 1-4 8-8z" stroke="#3B82F6" strokeWidth="2" />
+            <circle cx="17" cy="7" r="3" stroke="#14B8A6" strokeWidth="2" />
+          </svg>
+        );
+      case "Automation":
+        return (
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <circle cx="12" cy="12" r="8" stroke="#14B8A6" strokeWidth="2" />
+            <path d="M12 8v4l3 3" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="12" cy="12" r="2" fill="#3B82F6" />
+          </svg>
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <section id="services" className="w-full bg-gradient-to-b from-white via-blue-50/40 to-white py-20 md:py-32">
@@ -67,18 +101,9 @@ export default function Services() {
               
               {/* Content */}
               <div className="flex-1 space-y-5 mt-2">
-                {/* Icon with background glow */}
-                <div className="relative w-20 h-20 mb-4">
-                  <div className="absolute inset-0 bg-brand/10 rounded-2xl blur-xl group-hover:bg-brand/20 transition-all duration-500" />
-                  <div className="relative w-full h-full bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-4 group-hover:scale-110 transition-transform duration-500">
-                    <Image 
-                      src={service.icon} 
-                      alt={`${service.title} icon`}
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
+                {/* Flat Icon */}
+                <div className="mb-4 flex items-center justify-start">
+                  {renderIcon(service.title)}
                 </div>
                 
                 {/* Title */}

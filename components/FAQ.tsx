@@ -66,37 +66,15 @@ export default function FAQ() {
                 
                 {/* Plus/Minus Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-8 h-8 rounded-full bg-brand/10 flex items-center justify-center">
-                    {openIndex === index ? (
-                      <svg
-                        className="w-5 h-5 text-brand transition-transform duration-200"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2.5}
-                          d="M20 12H4"
-                        />
-                      </svg>
-                    ) : (
-                      <svg
-                        className="w-5 h-5 text-brand transition-transform duration-200"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2.5}
-                          d="M12 4v16m8-8H4"
-                        />
-                      </svg>
-                    )}
-                  </div>
+                  {openIndex === index ? (
+                    <svg width="24" height="24" fill="none" stroke="#14B8A6" strokeWidth="2" strokeLinecap="round" aria-hidden>
+                      <path d="M5 12h14" />
+                    </svg>
+                  ) : (
+                    <svg width="24" height="24" fill="none" stroke="#14B8A6" strokeWidth="2" strokeLinecap="round" aria-hidden>
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
+                  )}
                 </div>
               </button>
 

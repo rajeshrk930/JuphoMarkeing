@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 export default function Testimonials() {
   const testimonials = [
@@ -68,18 +67,11 @@ export default function Testimonials() {
               {/* Top accent gradient */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-teal-500 to-brand-secondary rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              {/* Quote Icon with glow */}
-              <div className="relative mb-6">
-                <div className="absolute inset-0 bg-brand/5 rounded-2xl blur-xl group-hover:bg-brand/10 transition-all duration-500" />
-                <div className="relative w-20 h-20 bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-4 group-hover:scale-110 transition-transform duration-500 flex items-center justify-center">
-                  <Image 
-                    src="/quote.png" 
-                    alt="Quote icon"
-                    width={64}
-                    height={64}
-                    className="w-12 h-12 object-contain opacity-40 group-hover:opacity-60 transition-opacity duration-500"
-                  />
-                </div>
+              {/* Flat Quote Icon */}
+              <div className="mb-6 flex items-center">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M7 9h3v6H7a3 3 0 0 1 0-6zm7 0h3v6h-3a3 3 0 1 1 0-6z" fill="#14B8A6" />
+                </svg>
               </div>
 
               {/* Quote */}
