@@ -85,7 +85,7 @@ html {
 }
 
 .animate-marquee-rtl {
-  animation: marquee-rtl 24s linear infinite;
+  animation: marquee-rtl 80s linear infinite;
 }
 
 /* Faster marquee for mobile */
