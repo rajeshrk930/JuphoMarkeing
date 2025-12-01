@@ -80,10 +80,15 @@ html {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.333%);
   }
 }
 
 .animate-marquee-rtl {
-  animation: marquee-rtl 15s linear infinite;
+  animation: marquee-rtl 20s linear infinite;
+}
+
+/* Faster marquee for mobile */
+.animate-marquee-mobile {
+  animation: marquee-rtl 12s linear infinite;
 }

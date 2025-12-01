@@ -18,7 +18,7 @@ export default function BrandMarquee() {
     "Education & Training Brands"
   ];
 
-  const allBrands = [...brands, ...brands];
+  const allBrands = [...brands, ...brands, ...brands];
 
   return (
     <section className="w-full bg-bgSection py-12 overflow-hidden">
@@ -28,14 +28,14 @@ export default function BrandMarquee() {
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-bgSection to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-bgSection to-transparent z-10" />
 
-        {/* Marquee */}
-        <div className="flex animate-marquee-rtl">
+        {/* Marquee - faster on mobile */}
+        <div className="flex animate-marquee-mobile md:animate-marquee-rtl">
           {allBrands.map((brand, index) => (
             <div
               key={index}
-              className="flex-shrink-0 mx-10 flex items-center justify-center"
+              className="flex-shrink-0 mx-6 md:mx-10 flex items-center justify-center"
             >
-              <span className="text-xl md:text-2xl font-semibold text-textGrey/50 whitespace-nowrap">
+              <span className="text-base md:text-xl lg:text-2xl font-semibold text-textGrey/50 whitespace-nowrap">
                 {brand}
               </span>
             </div>
