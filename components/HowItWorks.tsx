@@ -31,21 +31,21 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Strategy & Discovery",
+      title: "Understand Your Business",
       description:
-        "We analyze your business goals, target audience, and competitive landscape to create a data-driven marketing strategy tailored to your needs.",
+        "We learn about your products, customers, and goals. No complex jargon - just understanding what makes your business successful.",
     },
     {
-      number: "02",
-      title: "Campaign Setup",
+      number: "02", 
+      title: "Launch High-Converting Ad Campaigns",
       description:
-        "Our team builds optimized campaigns across channels, setting up tracking, audiences, and creative assets for maximum performance.",
+        "We create simple, effective ads that reach your ideal customers on Facebook and Instagram. Track every rupee spent.",
     },
     {
       number: "03",
-      title: "Launch & Optimize",
+      title: "Optimize and Scale Results",
       description:
-        "We launch your campaigns and continuously monitor performance, making real-time adjustments to improve ROI and scale winning strategies.",
+        "We monitor daily performance, reduce cost per lead, and increase your customer flow. More leads, better quality, lower cost.",
     },
     {
       number: "04",
@@ -56,7 +56,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="w-full bg-gradient-to-b from-white via-gray-50/60 to-white py-20 md:py-32">
+    <section id="how-it-works" className="w-full bg-white py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -66,11 +66,11 @@ export default function HowItWorks() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            How It Works
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-3">
+            How We Grow Your Business
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our proven process delivers results in four simple steps
+          <p className="text-base text-[#333333] font-medium max-w-xl mx-auto">
+            Simple 3-step process to get more customers for your Indian business. No complicated tech - just results.
           </p>
         </motion.div>
 
@@ -86,7 +86,7 @@ export default function HowItWorks() {
             <motion.div
               key={idx}
               variants={item}
-              className="group relative bg-gray-50 rounded-xl p-8 md:p-10 hover:bg-gray-100 transition-all duration-300 border border-gray-100"
+              className="group relative bg-white rounded-md p-6 md:p-8 hover:bg-gray-50 transition-all duration-300 border border-gray-200 shadow-sm hover:shadow-md"
               whileHover={{ y: -6 }}
             >
               {/* Vertical Accent Bar */}

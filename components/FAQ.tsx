@@ -3,32 +3,32 @@
 import React, { useState } from "react";
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
-      question: "What makes your performance marketing approach different?",
-      answer: "We focus on profit-first metrics like MER, CAC, and payback windows rather than vanity metrics. Our data-driven approach includes rapid creative testing, clean tracking architecture, and strategic budget allocation to maximize ROI at every stage."
-    },
-    {
-      question: "How long does it take to see results?",
-      answer: "Most clients see initial improvements within 2-3 weeks as we optimize campaigns. Significant scaling typically happens after 30-45 days once we've identified winning creative angles and audience segments. We provide weekly reports to track progress transparently."
+      question: "How fast can I see results from Meta Ads?",
+      answer: "You usually see traction within the first 7–10 days. Real optimization takes 2–4 weeks as the system learns and your audience stabilizes."
     },
     {
       question: "What industries do you work with?",
-      answer: "We specialize in DTC brands, SaaS companies, coaching businesses, and professional services. Our performance marketing strategies are adaptable across industries, with proven success in e-commerce, B2B lead generation, and high-ticket service offerings."
+      answer: "Real estate, education, coaching, ecommerce, salons, restaurants, and local service businesses. Lead-generation focused niches perform best."
     },
     {
-      question: "Do you require a minimum ad spend commitment?",
-      answer: "Our starter package begins at ₹20,000 per month, which includes strategy, creative development, and campaign management. We recommend a minimum ad spend of ₹15,000-30,000 monthly to generate sufficient data for optimization and meaningful results."
+      question: "Do you provide content or do I need to share creatives?",
+      answer: "We handle ad creatives, copy, and strategy. If you have brand assets, we use them. If not, we create everything from scratch."
     },
     {
-      question: "How do you handle creative production?",
-      answer: "We produce UGC-style ads with proven hooks and native formats. Our team handles scripting, creator sourcing, and editing. We typically deliver 3-5 video variations per sprint with rapid iteration based on performance data."
+      question: "How does AI automation help my business?",
+      answer: "Instant replies, faster follow-up, and structured workflows turn more leads into paying customers. It reduces manual work and increases conversion rates."
     },
     {
-      question: "What platforms do you run ads on?",
-      answer: "We primarily focus on Meta (Facebook & Instagram) and Google Ads, with WhatsApp funnel integration for direct response. We can also manage LinkedIn, TikTok, and YouTube campaigns based on your target audience and business objectives."
+      question: "What is included in website development?",
+      answer: "A responsive design, fast performance, SEO basics, integrations, and a clean UI. You get a landing page built to convert paid traffic."
+    },
+    {
+      question: "What are the monthly charges after setup?",
+      answer: "Ads management has a fixed monthly fee. Automation and website hosting have minimal maintenance charges depending on usage and integrations."
     }
   ];
 
@@ -37,44 +37,42 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faqs" className="w-full bg-white py-20 md:py-32">
-      <div className="max-w-4xl mx-auto px-6">
+    <section id="faqs" className="w-full bg-white py-16 md:py-24">
+      <div className="max-w-6xl mx-auto px-4">
         
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Frequently Asked Questions
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4">
+            FAQs
           </h2>
-          <div className="w-24 h-1 bg-brand mx-auto mt-6 rounded-full" />
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="max-w-5xl mx-auto space-y-0 border-t border-gray-200">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
+              className="border-b border-gray-200"
             >
               {/* Question Button */}
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between p-6 md:p-8 text-left hover:bg-gray-50 transition-colors"
+                className="w-full flex items-center justify-between py-6 md:py-8 text-left hover:bg-gray-50 transition-colors"
               >
-                <span className="text-lg md:text-xl font-bold text-black pr-8">
+                <span className="text-base md:text-lg font-normal text-ink pr-8">
                   {faq.question}
                 </span>
                 
-                {/* Plus/Minus Icon */}
+                {/* Chevron Icon */}
                 <div className="flex-shrink-0">
-                  {openIndex === index ? (
-                    <svg width="24" height="24" fill="none" stroke="#14B8A6" strokeWidth="2" strokeLinecap="round" aria-hidden>
-                      <path d="M5 12h14" />
-                    </svg>
-                  ) : (
-                    <svg width="24" height="24" fill="none" stroke="#14B8A6" strokeWidth="2" strokeLinecap="round" aria-hidden>
-                      <path d="M12 5v14M5 12h14" />
-                    </svg>
-                  )}
+                  <svg 
+                    className={`w-5 h-5 text-gray-600 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </div>
               </button>
 
@@ -84,8 +82,8 @@ export default function FAQ() {
                   openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-6 md:px-8 pb-6 md:pb-8 pt-2">
-                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                <div className="pb-6 md:pb-8">
+                  <p className="text-base text-gray-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -93,8 +91,6 @@ export default function FAQ() {
             </div>
           ))}
         </div>
-
-        {/* Removed CTA; final audit section will handle conversion */}
 
       </div>
     </section>

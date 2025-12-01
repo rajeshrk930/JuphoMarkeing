@@ -3,11 +3,13 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import HowItWorks from "../components/HowItWorks";
+import BrandMarquee from "../components/BrandMarquee";
 import Services from "../components/Services";
+import OurWork from "../components/OurWork";
+import ClientResults from "../components/ClientResults";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
-import FinalCTA from "../components/FinalCTA";
+
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import WhatsAppFloat from "../components/WhatsAppFloat";
@@ -20,12 +22,14 @@ export default function Home() {
     <>
       <Header onOpenContact={() => setIsContactModalOpen(true)} />
       <Hero onOpenContact={() => setIsContactModalOpen(true)} />
+      <BrandMarquee />
       <Services />
-      <HowItWorks />
+      
+      <ClientResults />
       <Testimonials />
       <FAQ />
-      {/* <FinalCTA /> */}
-      <Footer />
+      
+      <Footer onOpenContact={() => setIsContactModalOpen(true)} />
       <ScrollToTop />
       <WhatsAppFloat />
       <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />

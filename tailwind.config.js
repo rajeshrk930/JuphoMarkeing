@@ -8,12 +8,16 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: "#14B8A6",
-          secondary: "#3B82F6"
+          DEFAULT: 'var(--primary)',
+          dark: 'var(--primary-dark)',
+          light: 'var(--primary-light)'
         },
-        ink: "#111111",
-        mid: "#444444",
-        accent: "#F59E0B"
+        ink: 'var(--black)',
+        mid: '#333333',
+        textGrey: 'var(--text-grey)',
+        lightGrey: 'var(--light-grey)',
+        bg: 'var(--bg)',
+        bgSection: 'var(--bg-section)'
       }
     }
   },

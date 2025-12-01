@@ -1,96 +1,108 @@
-// THEME LOCK - DO NOT AUTO MODIFY
 import React from "react";
-import ServiceCard from "./ServiceCard";
 
 const services = [
   {
-    title: "Meta Ads",
+    title: "Lead Generation (Meta Ads)",
     benefits: [
-      "Advanced campaign optimization and audience targeting",
-      "Data-driven strategies that maximize ROAS",
-      "A/B testing and continuous performance improvement"
+      "Facebook & Instagram campaign management",
+      "Advanced audience targeting & retargeting",
+      "Daily optimization for better CPL",
+      "A/B testing and performance tracking"
     ],
-    tint: "bg-[#E6FFFA]/20",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
-        <rect x="3" y="4" width="18" height="14" rx="2" stroke="#14B8A6" strokeWidth="2" />
-        <path d="M3 8h18" stroke="#3B82F6" strokeWidth="2" />
-        <circle cx="12" cy="13" r="3" stroke="#3B82F6" strokeWidth="2" />
-        <path d="M16 17l3 3" stroke="#14B8A6" strokeWidth="2" strokeLinecap="round" />
-      </svg>
-    )
+    price: "₹10,000",
+    priceLabel: "Starting at",
+    pricePeriod: "/month",
+    image: "/lead-generation.png" 
   },
   {
-    title: "Brand Strategy",
+    title: "AI Automation & Integration",
     benefits: [
-      "Comprehensive brand positioning and messaging",
-      "Market research and competitor analysis",
-      "Brand identity development and guidelines"
+      "Custom AI chatbot development",
+      "Automated lead qualification",
+      "WhatsApp & CRM integration",
+      "Workflow automation setup"
     ],
-    tint: "bg-[#E6FFFA]/20",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
-        <path d="M4 4h16v16H4z" stroke="#14B8A6" strokeWidth="2" />
-        <path d="M7 14l3-3 2 2 5-5" stroke="#3B82F6" strokeWidth="2" fill="none" />
-        <path d="M7 18h10" stroke="#14B8A6" strokeWidth="2" />
-      </svg>
-    )
+    price: "₹15,000",
+    priceLabel: "Starting at",
+    pricePeriod: "/setup",
+    image: "/ai-automation.png"
   },
   {
-    title: "Design",
+    title: "Website Design & Development",
     benefits: [
-      "Creative ad designs that capture attention",
-      "Brand-consistent visual assets across platforms",
-      "High-converting landing pages and creatives"
+      "Custom responsive website design",
+      "Landing page optimization",
+      "SEO-friendly development",
+      "Ongoing maintenance & support"
     ],
-    tint: "bg-[#EFF6FF]/20",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
-        <path d="M12 2l4 4-8 8-4 1 1-4 8-8z" stroke="#3B82F6" strokeWidth="2" />
-        <circle cx="17" cy="7" r="3" stroke="#14B8A6" strokeWidth="2" />
-      </svg>
-    )
-  },
-  {
-    title: "Automation",
-    benefits: [
-      "Automated lead qualification and nurturing",
-      "WhatsApp and email marketing workflows",
-      "CRM integration and performance tracking"
-    ],
-    tint: "bg-[#E6FFFA]/20",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
-        <circle cx="12" cy="12" r="8" stroke="#14B8A6" strokeWidth="2" />
-        <path d="M12 8v4l3 3" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="12" cy="12" r="2" fill="#3B82F6" />
-      </svg>
-    )
+    price: "₹15,000",
+    priceLabel: "Starting at",
+    pricePeriod: "/month",
+    image: "/website-design.png"
   }
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="w-full bg-gradient-to-b from-white via-[#EFF6FF]/40 to-white py-20 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="services" className="w-full bg-lightGrey py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#111111] mb-4">Our Services</h2>
-          <p className="text-lg text-[#444444] max-w-2xl mx-auto">
-            Comprehensive performance marketing solutions tailored to your business goals
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-ink mb-3">
+            What We Deliver
+          </h2>
+          <p className="text-base text-textGrey font-medium max-w-xl mx-auto">
+            Complete Meta Ads management with creative production and automation
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <ServiceCard
+            <div
               key={index}
-              title={service.title}
-              benefits={service.benefits}
-              icon={service.icon}
-              tint={service.tint}
-            />
+              className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              {/* Image Header */}
+              <div className="relative h-48 overflow-hidden bg-lightGrey">
+                <div 
+                  className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url('${service.image}')` }}
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-ink mb-4 group-hover:text-brand transition-colors duration-300">
+                  {service.title}
+                </h3>
+
+                {/* Benefits List */}
+                <ul className="space-y-3 mb-6">
+                  {service.benefits.map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-textGrey">
+                      <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="#00b67a" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="leading-relaxed">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Pricing */}
+                <div className="pt-4 border-t border-gray-200">
+                  <div className="inline-block px-3 py-1 rounded-md mb-2" style={{ backgroundColor: '#f4b400' }}>
+                    <span className="text-xs font-semibold text-black uppercase tracking-wide">
+                      {service.priceLabel}
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-3xl font-bold text-ink">{service.price}</span>
+                    <span className="text-sm text-textGrey font-medium">{service.pricePeriod}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
