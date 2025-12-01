@@ -18,6 +18,7 @@ export default function BrandMarquee() {
     "Education & Training Brands"
   ];
 
+  // Triple the sequence so we can animate a full -100% loop
   const allBrands = [...brands, ...brands, ...brands];
 
   return (
@@ -28,12 +29,12 @@ export default function BrandMarquee() {
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-bgSection to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-bgSection to-transparent z-10" />
 
-        {/* Marquee - faster on mobile */}
-        <div className="flex animate-marquee-mobile md:animate-marquee-rtl">
+        {/* Marquee - prevent wrapping and ensure full width scroll */}
+        <div className="flex w-max marquee-track animate-marquee-mobile md:animate-marquee-rtl">
           {allBrands.map((brand, index) => (
             <div
               key={index}
-              className="flex-shrink-0 mx-6 md:mx-10 flex items-center justify-center"
+              className="flex-shrink-0 px-6 md:px-10 flex items-center justify-center"
             >
               <span className="text-base md:text-xl lg:text-2xl font-semibold text-textGrey/50 whitespace-nowrap">
                 {brand}

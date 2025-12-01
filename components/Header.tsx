@@ -13,9 +13,9 @@ export default function Header({ onOpenContact }: HeaderProps) {
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img
-            src="/jupho-logo2.png"
+            src="/Main-logo.png"
             alt="Jupho Logo"
-            className="h-16 md:h-20 w-auto"
+            className="h-12 md:h-16 w-auto"
           />
         </a>
         {/* WhatsApp Button Only */}
