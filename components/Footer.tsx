@@ -32,10 +32,10 @@ export default function Footer({ onOpenContact }: FooterProps) {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-gray-700 pt-4">
-          <p className="text-gray-400 text-sm">
+        <div className="pt-4">
+          <p className="text-gray-400 text-xs md:text-sm">
             Jupho Marketing Agency © {year} All rights reserved | 
-            <a href="/privacy-policy" className="text-gray-400 hover:text-white ml-2">Privacy Policy</a>
+            <a href="/privacy-policy" className="text-gray-400 hover:text-white ml-1 transition-colors">Privacy Policy</a>
           </p>
         </div>
 

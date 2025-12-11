@@ -9,13 +9,13 @@ interface HeaderProps {
 export default function Header({ onOpenContact }: HeaderProps) {
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between md:justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-center md:justify-between">
         {/* Logo */}
-        <a href="/" className="flex-shrink-0 md:flex-shrink-0">
+        <a href="/" className="flex-shrink-0">
           <img
             src="/Main-logo.png"
             alt="Jupho Logo"
-            className="h-12 md:h-16 w-auto mx-auto md:mx-0"
+            className="h-12 md:h-16 w-auto"
           />
         </a>
         {/* WhatsApp Button - Hidden on Mobile */}
