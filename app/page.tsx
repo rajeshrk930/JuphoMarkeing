@@ -12,7 +12,7 @@ import FAQ from "../components/FAQ";
 
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
-import WhatsAppFloat from "../components/WhatsAppFloat";
+import MobileBottomNav from "../components/MobileBottomNav";
 import ContactModal from "../components/ContactModal";
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
       
       <Footer onOpenContact={() => setIsContactModalOpen(true)} />
       <ScrollToTop />
-      <WhatsAppFloat />
+      <MobileBottomNav onOpenContact={() => setIsContactModalOpen(true)} />
       <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </>
   );

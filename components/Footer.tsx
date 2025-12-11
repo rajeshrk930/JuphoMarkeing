@@ -8,18 +8,18 @@ export default function Footer({ onOpenContact }: FooterProps) {
   const year = new Date().getFullYear();
   
   return (
-    <footer className="w-full text-white py-8" style={{ backgroundColor: '#212529' }}>
+    <footer className="w-full text-white py-8 pb-24 md:pb-8" style={{ backgroundColor: '#212529' }}>
       <div className="max-w-4xl mx-auto px-4 text-center">
         
         {/* CTA Heading */}
-        <div className="mb-6">
+        <div className="mb-6 hidden md:block">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
             Start Growing with Performance Marketing Today!
           </h2>
         </div>
 
         {/* CTA Button */}
-        <div className="flex flex-col items-center justify-center gap-3 mb-6">
+        <div className="hidden md:flex flex-col items-center justify-center gap-3 mb-6">
           <button
             onClick={onOpenContact}
             className="inline-flex items-center gap-2 bg-[#00b67a] hover:bg-[#009966] text-white px-8 py-4 rounded-md text-lg font-bold transition-all duration-300 shadow-md"
