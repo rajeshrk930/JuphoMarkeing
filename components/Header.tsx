@@ -20,7 +20,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
         </a>
         {/* WhatsApp Button - Hidden on Mobile */}
         <a
-          href="https://wa.me/917337420588?text=Hi!%20I'm%20interested%20in%20your%20marketing%20services."
+          href="https://wa.me/919652118590?text=Hi!%20I'm%20interested%20in%20your%20marketing%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 bg-[#00b67a] hover:bg-[#009966] text-white px-5 py-3 rounded-lg text-sm font-bold transition-all duration-300 shadow-sm hover:shadow-md"

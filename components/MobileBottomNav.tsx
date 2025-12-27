@@ -6,7 +6,7 @@ interface MobileBottomNavProps {
 }
 
 export default function MobileBottomNav({ onOpenContact }: MobileBottomNavProps) {
-  const whatsappNumber = "917337420588";
+  const whatsappNumber = "919652118590";
   const message = "Hi! I'm interested in your marketing services.";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
