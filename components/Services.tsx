@@ -9,7 +9,7 @@ const services = [
       "Daily optimization for better CPL",
       "A/B testing and performance tracking"
     ],
-    price: "₹10,000",
+    price: "₹20,000",
     priceLabel: "Starting at",
     pricePeriod: "/month",
     image: "/lead-generation.png" 

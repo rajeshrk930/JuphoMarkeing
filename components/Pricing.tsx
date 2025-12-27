@@ -9,7 +9,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
   const packages = [
     {
       name: "Starter",
-      price: "10,000",
+      price: "20,000",
       period: "/month",
       description: "Perfect for testing Meta Ads",
       features: [
