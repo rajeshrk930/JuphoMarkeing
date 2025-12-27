@@ -18,7 +18,7 @@ export default function FinalCTA({ onOpenContact }: FinalCTAProps) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Primary WhatsApp CTA */}
           <a
-            href="https://wa.me/917337420588?text=Hi!%20I'm%20interested%20in%20getting%20more%20leads%20for%20my%20business."
+            href="https://wa.me/919652118590?text=Hi!%20I'm%20interested%20in%20getting%20more%20leads%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#22c55e] text-white px-8 py-4 rounded-md text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
