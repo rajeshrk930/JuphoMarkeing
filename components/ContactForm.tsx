@@ -57,6 +57,16 @@ export default function ContactForm() {
       
       if (!res.ok) throw new Error("Failed to submit");
       
+      // Track Meta Pixel Lead event
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead', {
+          content_name: 'Contact Form Submission',
+          content_category: 'contact',
+          value: form.spend,
+          currency: 'USD'
+        });
+      }
+      
       setStatus("success");
       setForm(initialState);
     } catch (err: any) {
