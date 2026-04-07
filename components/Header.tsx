@@ -13,7 +13,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img
-            src="/Clickboostlogo.jpeg"
+            src="/clickbook-finallogo.png"
             alt="ClickBoost Logo"
             className="h-12 md:h-16 w-auto"
           />
