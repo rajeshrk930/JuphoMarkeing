@@ -34,7 +34,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
         {/* Footer Bottom */}
         <div className="pt-4">
           <p className="text-[#C7D0E0] text-xs md:text-sm">
-            Jupho Marketing Agency © {year} All rights reserved | 
+            ClickBoost Marketing Agency © {year} All rights reserved | 
             <a href="/privacy-policy" className="text-[#C7D0E0] hover:text-white ml-1 transition-colors">Privacy Policy</a>
           </p>
         </div>

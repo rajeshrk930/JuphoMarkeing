@@ -44,12 +44,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <div>
                     <h3 className="font-bold text-white text-sm mb-2">careers</h3>
                     <p className="text-sm text-[#C7D0E0] mb-2">Would you like to join our growing team?</p>
-                    <a href="mailto:Hr@jupho.com" className="text-sm text-white font-semibold hover:text-brand transition">Hr@jupho.com</a>
+                    <a href="mailto:hr@clickboostads.in" className="text-sm text-white font-semibold hover:text-brand transition">hr@clickboostads.in</a>
                   </div>
                   <div>
                     <h3 className="font-bold text-white text-sm mb-2">Feedbacks</h3>
                     <p className="text-sm text-[#C7D0E0] mb-2">Have a project in mind?</p>
-                    <a href="mailto:Hi@jupho.com" className="text-sm text-white font-semibold hover:text-brand transition">Hi@jupho.com</a>
+                    <a href="mailto:hi@clickboostads.in" className="text-sm text-white font-semibold hover:text-brand transition">hi@clickboostads.in</a>
                   </div>
                 </div>
               </div>

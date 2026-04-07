@@ -35,7 +35,7 @@ async function sendWhatsAppNotification(leadData: any) {
 🕐 *Time:* ${new Date().toLocaleString()}
 
 ---
-_Jupho Lead Dashboard_`;
+_ClickBoost Lead Dashboard_`;
 
     await twilioClient.messages.create({
       from: TWILIO_WHATSAPP_FROM,

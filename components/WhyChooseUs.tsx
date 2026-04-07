@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
             Your Trusted Performance Marketing Partner
           </h2>
           <p className="text-lg text-textSecondary max-w-3xl mx-auto leading-relaxed">
-            With over 15 years of experience helping brands grow online, Jupho specializes in creating marketing systems that drive ROI, not just traffic. Our team of certified experts ensures every campaign is built for scale, accountability, and measurable success.
+            With over 15 years of experience helping brands grow online, ClickBoost specializes in creating marketing systems that drive ROI, not just traffic. Our team of certified experts ensures every campaign is built for scale, accountability, and measurable success.
           </p>
         </div>
 

@@ -2,8 +2,8 @@ import "./../styles/globals.css";
 import React from "react";
 
 export const metadata = {
-  title: "Jupho — Performance Marketing",
-  description: "Jupho — Meta Ads + WhatsApp Funnels. Get a free audit.",
+  title: "ClickBoost — Performance Marketing",
+  description: "ClickBoost — Meta Ads + WhatsApp Funnels. Get a free audit.",
   icons: {
     icon: "/clickboost-fav.png",
   },

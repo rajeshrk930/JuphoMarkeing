@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
               <p>
-                This website is owned and managed by Jupho Marketing Agency.
+                This website is owned and managed by ClickBoost Marketing Agency.
               </p>
               <p className="mt-3">
                 We respect your privacy and collect only the information you submit through our contact form.
@@ -115,8 +115,8 @@ export default function PrivacyPolicy() {
                 If you have questions about this Privacy Policy, contact us:
               </p>
               <div className="space-y-2">
-                <p><strong>Jupho Marketing Agency</strong></p>
-                <p><strong>Email:</strong> hi@jupho.com</p>
+                <p><strong>ClickBoost Marketing Agency</strong></p>
+                <p><strong>Email:</strong> hi@clickboostads.in</p>
                 <p><strong>Address:</strong> India, Telangana</p>
               </div>
             </section>

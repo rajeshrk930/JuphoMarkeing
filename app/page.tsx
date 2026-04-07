@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import BrandMarquee from "../components/BrandMarquee";
 import Services from "../components/Services";
+import HowItWorks from "../components/HowItWorks";
+import WhyChooseUs from "../components/WhyChooseUs";
 import OurWork from "../components/OurWork";
 import ClientResults from "../components/ClientResults";
 import Testimonials from "../components/Testimonials";
@@ -23,11 +25,20 @@ export default function Home() {
       <Header onOpenContact={() => setIsContactModalOpen(true)} />
       <Hero onOpenContact={() => setIsContactModalOpen(true)} />
       <BrandMarquee />
-      <Services />
-      
+      <div id="services">
+        <Services />
+      </div>
+      <div id="how-it-works">
+        <HowItWorks />
+      </div>
+      <div id="why-choose-us">
+        <WhyChooseUs />
+      </div>
       <ClientResults />
       <Testimonials />
-      <FAQ />
+      <div id="faq">
+        <FAQ />
+      </div>
       
       <Footer onOpenContact={() => setIsContactModalOpen(true)} />
       <ScrollToTop />
