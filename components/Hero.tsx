@@ -41,7 +41,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
               transition={{ delay: 0.1, duration: 0.7 }}
               className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-bold text-white leading-tight"
             >
-              Transform Your Business with Performance Marketing
+              Get More Clients with High-Performance Meta Ads
             </motion.h1>
 
             <motion.p
@@ -50,7 +50,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
               transition={{ delay: 0.15, duration: 0.7 }}
               className="text-sm sm:text-base md:text-sm text-gray-100 leading-relaxed max-w-xl"
             >
-              We help Indian businesses generate quality leads, increase sales, and grow with Meta Ads, websites, and smart WhatsApp automation.
+              We help businesses generate consistent, high-quality leads using data-driven Meta Ads strategies.
             </motion.p>
 
             {/* BADGES - 2x2 Grid */}
@@ -64,25 +64,25 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 <svg className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm sm:text-base md:text-sm font-medium leading-snug">Meta Ads + WhatsApp Automation Specialist</span>
+                <span className="text-sm sm:text-base md:text-sm font-medium leading-snug">High-Quality Lead Generation</span>
               </div>
               <div className="flex items-start gap-2.5 text-white">
                 <svg className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm sm:text-base md:text-sm font-medium leading-snug">Proven Results for Local & Online Businesses</span>
+                <span className="text-sm sm:text-base md:text-sm font-medium leading-snug">Data-Driven Ad Strategy</span>
+              </div>
+              <div className="flex items-start gap-2.5 text-white">
+                <svg className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm sm:text-base md:text-sm font-medium leading-snug">Transparent Reporting</span>
               </div>
               <div className="flex items-start gap-2.5 text-white">
                 <svg className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="text-sm sm:text-base md:text-sm font-medium leading-snug">Fast Support & Clear Communication</span>
-              </div>
-              <div className="flex items-start gap-2.5 text-white">
-                <svg className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-sm sm:text-base md:text-sm font-medium leading-snug">Transparent Reporting & Strategy</span>
               </div>
             </motion.div>
           </motion.div>
@@ -95,7 +95,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             className="bg-[#132A4A] rounded-xl p-6 md:p-7 shadow-2xl w-full max-w-md md:max-w-sm mx-auto md:mx-0 border border-[#1F3A5A]"
           >
             <h3 className="text-xl md:text-xl font-bold text-white mb-5">
-              Request a Call Back
+              Book Your Free Strategy Call
             </h3>
             
             {/* CTA Button */}
@@ -116,7 +116,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
               <svg className="w-4 h-4 text-[#00AEEF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>We respect your privacy</span>
+              <span>No spam. No commitment.</span>
             </div>
           </motion.div>
 
