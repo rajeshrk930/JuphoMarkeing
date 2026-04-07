@@ -2,20 +2,23 @@ import React from "react";
 
 const services = [
   {
-    title: "Lead Generation (Meta Ads)",
+    title: "Meta Ads Lead Generation",
+    description: "We create and manage high-performing Meta Ads campaigns designed to generate consistent, high-quality leads for your business.",
     benefits: [
-      "Facebook & Instagram campaign management",
-      "Advanced audience targeting & retargeting",
-      "Daily optimization for better CPL",
-      "A/B testing and performance tracking"
+      "Facebook & Instagram Ads Management",
+      "Advanced Targeting & Retargeting",
+      "Daily Campaign Optimization",
+      "A/B Testing for Better Performance",
+      "Transparent Reporting & Insights"
     ],
-    price: "₹20,000",
-    priceLabel: "Starting at",
+    price: "₹10,000",
+    priceLabel: "Starting from",
     pricePeriod: "/month",
     image: "/lead-generation.png" 
   },
   {
     title: "AI Automation & Integration",
+    description: "Automate your lead management and customer interactions with intelligent AI chatbots and seamless CRM integration.",
     benefits: [
       "Custom AI chatbot development",
       "Automated lead qualification",
@@ -23,12 +26,13 @@ const services = [
       "Workflow automation setup"
     ],
     price: "₹15,000",
-    priceLabel: "Starting at",
+    priceLabel: "Starting from",
     pricePeriod: "/setup",
     image: "/ai-automation.png"
   },
   {
     title: "Website Design & Development",
+    description: "Professional, conversion-optimized websites built to turn your traffic into paying customers with modern design and SEO.",
     benefits: [
       "Custom responsive website design",
       "Landing page optimization",
@@ -36,7 +40,7 @@ const services = [
       "Ongoing maintenance & support"
     ],
     price: "₹15,000",
-    priceLabel: "Starting at",
+    priceLabel: "Starting from",
     pricePeriod: "/month",
     image: "/website-design.png"
   }
@@ -73,9 +77,16 @@ export default function Services() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-brand transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors duration-300">
                   {service.title}
                 </h3>
+
+                {/* Description */}
+                {service.description && (
+                  <p className="text-sm text-textSecondary mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                )}
 
                 {/* Benefits List */}
                 <ul className="space-y-3 mb-6">
