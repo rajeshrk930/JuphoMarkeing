@@ -5,7 +5,7 @@ export const metadata = {
   title: "Jupho — Performance Marketing",
   description: "Jupho — Meta Ads + WhatsApp Funnels. Get a free audit.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/clickboost-fav.png",
   },
 };
 

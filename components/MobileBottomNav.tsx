@@ -15,7 +15,7 @@ export default function MobileBottomNav({ onOpenContact }: MobileBottomNavProps)
       <div className="flex items-stretch">
         {/* Instagram Icon */}
         <a
-          href="https://www.instagram.com/jupho_com"
+          href="https://www.instagram.com/clickboostads.in?igsh=MWdoZXRqaGd1N2liaw=="
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-16 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 hover:scale-105 transition-transform duration-300"
