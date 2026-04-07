@@ -12,25 +12,25 @@ export default function PrivacyPolicy() {
     <>
       <Header onOpenContact={() => setIsContactModalOpen(true)} />
       
-      <main className="w-full bg-white py-16 md:py-24">
+      <main className="w-full bg-bg py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4">
           
           {/* Page Header */}
           <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-ink mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Privacy Policy
             </h1>
-            <p className="text-lg text-textGrey">
+            <p className="text-lg text-textSecondary">
               Last Updated: December 1, 2025
             </p>
           </div>
 
           {/* Content Sections */}
-          <div className="space-y-8 text-textGrey leading-relaxed">
+          <div className="space-y-8 text-textSecondary leading-relaxed">
             
             {/* Introduction */}
             <section>
-              <h2 className="text-2xl font-bold text-ink mb-4">1. Introduction</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
               <p>
                 This website is owned and managed by Jupho Marketing Agency.
               </p>
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
 
             {/* Information We Collect */}
             <section>
-              <h2 className="text-2xl font-bold text-ink mb-4">2. Information We Collect</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">2. Information We Collect</h2>
               <p>When you fill out our contact form, we collect the following details:</p>
               <ul className="list-disc pl-6 mt-3 space-y-2">
                 <li>Your name</li>
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
 
             {/* How We Use Your Information */}
             <section>
-              <h2 className="text-2xl font-bold text-ink mb-4">3. How We Use Your Information</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">3. How We Use Your Information</h2>
               <p>We use the information you provide only to:</p>
               <ul className="list-disc pl-6 mt-3 space-y-2">
                 <li>Respond to your inquiry</li>
@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
 
             {/* Data Sharing */}
             <section>
-              <h2 className="text-2xl font-bold text-ink mb-4">4. Data Sharing</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">4. Data Sharing</h2>
               <p>
                 We do not share, sell, or rent your information to any third party.
               </p>
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
 
             {/* Data Security */}
             <section>
-              <h2 className="text-2xl font-bold text-ink mb-4">5. Data Security</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">5. Data Security</h2>
               <p>
                 We store your information securely and take reasonable steps to prevent unauthorized access.
               </p>
@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
 
             {/* Data Retention */}
             <section>
-              <h2 className="text-2xl font-bold text-ink mb-4">6. Data Retention</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">6. Data Retention</h2>
               <p>
                 Your contact form details may be stored for up to 12 months for reference and follow-up.
               </p>
@@ -102,15 +102,15 @@ export default function PrivacyPolicy() {
 
             {/* Your Rights */}
             <section>
-              <h2 className="text-2xl font-bold text-ink mb-4">7. Your Rights</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">7. Your Rights</h2>
               <p>
                 You may request access, correction, or deletion of your information at any time by contacting us.
               </p>
             </section>
 
             {/* Contact Information */}
-            <section className="bg-lightGrey p-6 rounded-xl">
-              <h2 className="text-2xl font-bold text-ink mb-4">8. Contact Us</h2>
+            <section className="bg-bgSection p-6 rounded-xl border border-[#132A4A]">
+              <h2 className="text-2xl font-bold text-white mb-4">8. Contact Us</h2>
               <p className="mb-4">
                 If you have questions about this Privacy Policy, contact us:
               </p>

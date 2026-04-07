@@ -12,12 +12,18 @@ module.exports = {
           dark: 'var(--primary-dark)',
           light: 'var(--primary-light)'
         },
-        ink: 'var(--black)',
-        mid: '#333333',
+        accent: {
+          DEFAULT: 'var(--accent-blue)',
+          light: 'var(--accent-blue-light)'
+        },
+        ink: 'var(--text-primary)',
+        mid: '#C7D0E0',
         textGrey: 'var(--text-grey)',
+        textSecondary: 'var(--text-secondary)',
         lightGrey: 'var(--light-grey)',
         bg: 'var(--bg)',
-        bgSection: 'var(--bg-section)'
+        bgSection: 'var(--bg-section)',
+        bgCard: 'var(--bg-card)'
       }
     }
   },

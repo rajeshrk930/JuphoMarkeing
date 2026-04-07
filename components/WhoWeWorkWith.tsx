@@ -29,14 +29,14 @@ const industries = [
 
 export default function WhoWeWorkWith() {
   return (
-    <section className="w-full bg-lightGrey py-20">
+    <section className="w-full bg-bgSection py-20">
       <div className="max-w-6xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Who We Work With
           </h2>
-          <p className="text-lg text-textGrey max-w-2xl mx-auto">
+          <p className="text-lg text-textSecondary max-w-2xl mx-auto">
             We help Indian businesses of all sizes get more customers through targeted marketing
           </p>
         </div>
@@ -46,12 +46,12 @@ export default function WhoWeWorkWith() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="bg-bgCard rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#132A4A]"
             >
-              <h3 className="text-xl font-bold text-ink mb-3">
+              <h3 className="text-xl font-bold text-white mb-3">
                 {industry.label}
               </h3>
-              <p className="text-base text-textGrey leading-relaxed">
+              <p className="text-base text-textSecondary leading-relaxed">
                 {industry.description}
               </p>
             </div>
@@ -60,8 +60,8 @@ export default function WhoWeWorkWith() {
 
         {/* Trust Strip */}
         <div className="mt-12 text-center">
-          <p className="text-base text-textGrey">
-            Trusted by businesses in <span className="font-bold text-ink">Mumbai, Delhi, Bangalore, Hyderabad, Pune & 15+ cities</span>
+          <p className="text-base text-textSecondary">
+            Trusted by businesses in <span className="font-bold text-white">Mumbai, Delhi, Bangalore, Hyderabad, Pune & 15+ cities</span>
           </p>
         </div>
       </div>

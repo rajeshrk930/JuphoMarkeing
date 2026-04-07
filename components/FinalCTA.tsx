@@ -6,12 +6,12 @@ interface FinalCTAProps {
 
 export default function FinalCTA({ onOpenContact }: FinalCTAProps) {
   return (
-    <section className="w-full bg-gradient-to-r from-[#00b67a] to-[#009966] py-16 md:py-20">
+    <section className="w-full bg-gradient-to-r from-[#FF7A00] to-[#FF9A2A] py-16 md:py-20">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           Ready to Get More Customers?
         </h2>
-          <p className="text-lg text-primary-light font-medium mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 font-medium mb-8 max-w-2xl mx-auto">
             Join 150+ Indian businesses getting quality leads every day through our proven marketing system.
         </p>
         
@@ -32,7 +32,7 @@ export default function FinalCTA({ onOpenContact }: FinalCTAProps) {
           {/* Secondary CTA */}
           <button
             onClick={onOpenContact}
-            className="inline-flex items-center gap-2 bg-white hover:bg-[#00b67a]/10 text-[#00b67a] px-6 py-4 rounded-md text-lg font-bold border-2 border-white hover:border-[#00b67a] transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-white hover:bg-white/90 text-[#FF7A00] px-6 py-4 rounded-md text-lg font-bold border-2 border-white transition-all duration-300"
           >
             Book Free Strategy Call
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,17 +42,17 @@ export default function FinalCTA({ onOpenContact }: FinalCTAProps) {
         </div>
         
         {/* Trust indicators */}
-        <div className="mt-8 flex items-center justify-center gap-6 text-primary-light text-sm font-medium">
+        <div className="mt-8 flex items-center justify-center gap-6 text-white/90 text-sm font-medium">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+            <div className="w-2 h-2 bg-white/60 rounded-full"></div>
             <span>No Setup Fees</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+            <div className="w-2 h-2 bg-white/60 rounded-full"></div>
             <span>Results in 14 Days</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+            <div className="w-2 h-2 bg-white/60 rounded-full"></div>
             <span>Cancel Anytime</span>
           </div>
         </div>

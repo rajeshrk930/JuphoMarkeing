@@ -14,7 +14,7 @@ type Props = {
 export default function ServiceCard({ title, benefits, icon, tint = "bg-[#E6FFFA]/20", bestFor }: Props) {
   return (
     <article
-      className="group relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 hover:-translate-y-1"
+      className="group relative bg-bgCard rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-[#132A4A] hover:-translate-y-1"
       aria-labelledby={`service-${title}`}
     >
       {/* subtle top accent (kept but faint) */}
@@ -23,16 +23,16 @@ export default function ServiceCard({ title, benefits, icon, tint = "bg-[#E6FFFA
       <div className="flex-1 space-y-5 mt-2">
         {/* Icon + title row */}
         <div className="flex items-start gap-4">
-          <div className="h-12 w-12 rounded-md bg-white flex items-center justify-center border border-gray-200">
+          <div className="h-12 w-12 rounded-md bg-bgSection flex items-center justify-center border border-[#132A4A]">
             <span className="inline-block">{icon}</span>
           </div>
 
           <div>
-            <h3 id={`service-${title}`} className="text-xl font-bold text-ink group-hover:text-brand transition-colors duration-300">
+            <h3 id={`service-${title}`} className="text-xl font-bold text-white group-hover:text-brand transition-colors duration-300">
               {title}
             </h3>
             {bestFor && (
-              <span className="inline-block mt-1 px-2 py-1 text-xs font-semibold bg-gray-100 text-gray-600 rounded-md">
+              <span className="inline-block mt-1 px-2 py-1 text-xs font-semibold bg-bgSection text-textSecondary rounded-md">
                 Best for: {bestFor}
               </span>
             )}
@@ -47,7 +47,7 @@ export default function ServiceCard({ title, benefits, icon, tint = "bg-[#E6FFFA
                 <path d="M10 18a8 8 0 100-16 8 8 0 000 16z" stroke="var(--primary)" strokeWidth="2" fill="none" />
                 <path d="M7.5 10.5l1.5 1.5 3-3" stroke="var(--primary-light)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
               </svg>
-              <span className="text-sm text-[#333333] font-medium leading-relaxed">{b}</span>
+              <span className="text-sm text-textSecondary font-medium leading-relaxed">{b}</span>
             </li>
           ))}
         </ul>

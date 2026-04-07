@@ -37,36 +37,36 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faqs" className="w-full bg-white py-16 md:py-24">
+    <section id="faqs" className="w-full bg-bg py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             FAQs
           </h2>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-5xl mx-auto space-y-0 border-t border-gray-200">
+        <div className="max-w-5xl mx-auto space-y-0 border-t border-[#00AEEF]/30">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b border-gray-200"
+              className="border-b border-[#00AEEF]/30"
             >
               {/* Question Button */}
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between py-6 md:py-8 text-left hover:bg-gray-50 transition-colors"
+                className="w-full flex items-center justify-between py-6 md:py-8 text-left hover:bg-bgSection transition-colors"
               >
-                <span className="text-base md:text-lg font-normal text-ink pr-8">
+                <span className="text-base md:text-lg font-normal text-white pr-8">
                   {faq.question}
                 </span>
                 
                 {/* Chevron Icon */}
                 <div className="flex-shrink-0">
                   <svg 
-                    className={`w-5 h-5 text-gray-600 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`} 
+                    className={`w-5 h-5 text-[#00AEEF] transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`} 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -83,7 +83,7 @@ export default function FAQ() {
                 }`}
               >
                 <div className="pb-6 md:pb-8">
-                  <p className="text-base text-gray-600 leading-relaxed">
+                  <p className="text-base text-textSecondary leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

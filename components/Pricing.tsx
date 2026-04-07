@@ -57,11 +57,11 @@ export default function Pricing({ onOpenContact }: PricingProps) {
   ];
 
   return (
-    <section className="w-full bg-white py-16 md:py-24">
+    <section className="w-full bg-bg py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <p className="text-base text-gray-600">
+          <p className="text-base text-textSecondary">
             Transparent pricing. No contracts. Cancel anytime.
           </p>
         </div>
@@ -71,14 +71,14 @@ export default function Pricing({ onOpenContact }: PricingProps) {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-lg ${
-                pkg.popular ? 'border-2 border-[#00b67a]' : 'border border-gray-200'
-              } p-6 hover:border-gray-300 transition-all duration-200`}
+              className={`relative bg-bgSection rounded-lg ${
+                pkg.popular ? 'border-2 border-[#FF7A00]' : 'border border-[#132A4A]'
+              } p-6 hover:border-[#FF7A00] transition-all duration-200`}
             >
               {/* Popular Badge */}
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-[#00b67a] text-white px-4 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-[#FF7A00] text-white px-4 py-1 rounded-full text-sm font-bold">
                     Most Popular
                   </span>
                 </div>
@@ -86,23 +86,23 @@ export default function Pricing({ onOpenContact }: PricingProps) {
 
               {/* Package Name */}
               <div className="mb-4">
-                <h3 className="text-xl font-bold text-ink mb-1">{pkg.name}</h3>
-                <p className="text-sm text-gray-500">{pkg.description}</p>
+                <h3 className="text-xl font-bold text-white mb-1">{pkg.name}</h3>
+                <p className="text-sm text-textSecondary">{pkg.description}</p>
               </div>
 
               {/* Price */}
               <div className="mb-6">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-ink">₹{pkg.price}</span>
-                  <span className="text-base text-gray-500">/month</span>
+                  <span className="text-3xl font-bold text-white">₹{pkg.price}</span>
+                  <span className="text-base text-textSecondary">/month</span>
                 </div>
               </div>
 
               {/* Features */}
               <ul className="space-y-3 mb-6">
                 {pkg.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-textGrey">
-                    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="#00b67a" viewBox="0 0 24 24">
+                  <li key={i} className="flex items-start gap-2 text-sm text-textSecondary">
+                    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{feature}</span>
@@ -111,16 +111,16 @@ export default function Pricing({ onOpenContact }: PricingProps) {
               </ul>
 
               {/* Outcome */}
-              <div className="mb-6 py-3 px-4 bg-gray-50 rounded border-l-4 border-[#00b67a]">
-                <p className="text-xs text-gray-500 uppercase mb-1">Outcome</p>
-                <p className="text-sm font-medium text-ink">{pkg.outcome}</p>
+              <div className="mb-6 py-3 px-4 bg-bgCard rounded border-l-4 border-[#FF7A00]">
+                <p className="text-xs text-textSecondary uppercase mb-1">Outcome</p>
+                <p className="text-sm font-medium text-white">{pkg.outcome}</p>
               </div>
 
               {/* CTA Button */}
               <button
                 onClick={onOpenContact}
-                className="w-full py-3 rounded-lg font-semibold transition-all duration-200 text-black hover:opacity-90"
-                style={{ backgroundColor: '#f4b400' }}
+                className="w-full py-3 rounded-lg font-semibold transition-all duration-200 text-white hover:opacity-90"
+                style={{ backgroundColor: '#FF7A00' }}
               >
                 Get a Custom Proposal →
               </button>
@@ -130,29 +130,29 @@ export default function Pricing({ onOpenContact }: PricingProps) {
 
         {/* Additional Info */}
         <div className="mt-12 text-center max-w-4xl mx-auto">
-          <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-            <p className="font-semibold text-ink mb-4">All Packages Include:</p>
-            <div className="grid md:grid-cols-3 gap-4 text-sm text-textGrey">
+          <div className="bg-bgSection rounded-lg p-6 border border-[#132A4A]">
+            <p className="font-semibold text-white mb-4">All Packages Include:</p>
+            <div className="grid md:grid-cols-3 gap-4 text-sm text-textSecondary">
               <div className="flex items-center gap-2 justify-center">
-                <svg className="w-5 h-5" fill="none" stroke="#00b67a" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Weekly reports</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
-                <svg className="w-5 h-5" fill="none" stroke="#00b67a" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>WhatsApp support</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
-                <svg className="w-5 h-5" fill="none" stroke="#00b67a" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Strategy call every 2 weeks</span>
               </div>
             </div>
-            <p className="text-xs text-textGrey mt-4">
+            <p className="text-xs text-textSecondary mt-4">
               * Ad spend is separate and paid directly to Meta. Minimum recommended: ₹15,000-30,000/month
             </p>
           </div>

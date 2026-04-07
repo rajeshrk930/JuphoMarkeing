@@ -45,15 +45,15 @@ const benefits = [
 
 export default function Testimonials() {
   return (
-    <section id="reviews" className="w-full bg-white py-20">
+    <section id="reviews" className="w-full bg-bg py-20">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Why Choose Us
           </h2>
-          <p className="text-lg text-textGrey max-w-2xl mx-auto">
+          <p className="text-lg text-textSecondary max-w-2xl mx-auto">
             We're not just another marketing agency. We're your growth partner focused on delivering real, measurable results.
           </p>
         </div>
@@ -63,15 +63,15 @@ export default function Testimonials() {
           {benefits.map((benefit, i) => (
             <div
               key={i}
-              className="bg-lightGrey rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="bg-bgSection rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#132A4A]"
             >
               {/* Title */}
-              <h3 className="text-lg font-bold text-ink mb-3">
+              <h3 className="text-lg font-bold text-white mb-3">
                 {benefit.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-textGrey leading-relaxed">
+              <p className="text-sm text-textSecondary leading-relaxed">
                 {benefit.description}
               </p>
             </div>

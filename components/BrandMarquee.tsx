@@ -36,7 +36,7 @@ export default function BrandMarquee() {
               key={index}
               className="flex-shrink-0 px-6 md:px-10 flex items-center justify-center"
             >
-              <span className="text-base md:text-xl lg:text-2xl font-semibold text-textGrey/50 whitespace-nowrap">
+              <span className="text-base md:text-xl lg:text-2xl font-semibold text-[#C7D0E0]/50 whitespace-nowrap">
                 {brand}
               </span>
             </div>

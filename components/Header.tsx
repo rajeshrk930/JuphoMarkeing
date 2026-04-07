@@ -8,13 +8,13 @@ interface HeaderProps {
 
 export default function Header({ onOpenContact }: HeaderProps) {
   return (
-    <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <header className="w-full bg-[#0B1F3A] border-b border-[#132A4A] sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-center md:justify-between">
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img
-            src="/Main-logo.png"
-            alt="Jupho Logo"
+            src="/Clickboostlogo.jpeg"
+            alt="ClickBoost Logo"
             className="h-12 md:h-16 w-auto"
           />
         </a>

@@ -86,7 +86,7 @@ export default function ContactForm() {
               name="name"
               value={form.name}
               onChange={update}
-              className="w-full border-0 border-b-2 border-gray-300 px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-gray-900 placeholder-gray-600"
+              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
               placeholder="Your name?"
               required
             />
@@ -100,7 +100,7 @@ export default function ContactForm() {
               type="email"
               value={form.email}
               onChange={update}
-              className="w-full border-0 border-b-2 border-gray-300 px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-gray-900 placeholder-gray-600"
+              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
               placeholder="Your Email address?"
               required
             />
@@ -113,7 +113,7 @@ export default function ContactForm() {
               name="phone"
               value={form.phone}
               onChange={update}
-              className="w-full border-0 border-b-2 border-gray-300 px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-gray-900 placeholder-gray-600"
+              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
               placeholder="Your Phone Number?"
             />
           </div>
@@ -125,7 +125,7 @@ export default function ContactForm() {
               name="spend"
               value={form.spend}
               onChange={update}
-              className="w-full border-0 border-b-2 border-gray-300 px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-gray-900 placeholder-gray-600"
+              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
               placeholder="What's your budget?"
               required
             />
@@ -138,7 +138,7 @@ export default function ContactForm() {
               name="website"
               value={form.website}
               onChange={update}
-              className="w-full border-0 border-b-2 border-gray-300 px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-gray-900 placeholder-gray-600"
+              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
               placeholder="Your Website?"
             />
           </div>
@@ -151,7 +151,7 @@ export default function ContactForm() {
               value={form.message}
               onChange={update}
               rows={3}
-              className="w-full border-0 border-b-2 border-gray-300 px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-gray-900 placeholder-gray-600 resize-none"
+              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0] resize-none"
               placeholder="Tell us about your project"
             />
           </div>
@@ -168,7 +168,7 @@ export default function ContactForm() {
             className="mt-1 h-5 w-5 rounded border-gray-300 text-brand focus:ring-brand"
             required
           />
-          <label htmlFor="consent" className="text-sm text-gray-600">
+          <label htmlFor="consent" className="text-sm text-[#C7D0E0]">
             I agree to be contacted regarding this audit request *
           </label>
         </div>
@@ -200,7 +200,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="w-full bg-[#00b67a] hover:bg-[#009966] text-white py-4 rounded-lg font-semibold text-base transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center justify-center gap-2"
+          className="w-full bg-[#FF7A00] hover:bg-[#FF9A2A] text-white py-4 rounded-lg font-semibold text-base transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center justify-center gap-2"
         >
           {status === "submitting" ? (
             <>

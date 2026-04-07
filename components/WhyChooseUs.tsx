@@ -21,15 +21,15 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-bgSection py-20">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Your Trusted Performance Marketing Partner
           </h2>
-          <p className="text-lg text-textGrey max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-textSecondary max-w-3xl mx-auto leading-relaxed">
             With over 15 years of experience helping brands grow online, Jupho specializes in creating marketing systems that drive ROI, not just traffic. Our team of certified experts ensures every campaign is built for scale, accountability, and measurable success.
           </p>
         </div>
@@ -39,12 +39,12 @@ export default function WhyChooseUs() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-lightGrey rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300"
+              className="bg-bgCard rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-[#132A4A]"
             >
               <div className="text-4xl font-bold text-brand mb-2">
                 {stat.number}
               </div>
-              <p className="text-sm text-textGrey font-medium">
+              <p className="text-sm text-textSecondary font-medium">
                 {stat.label}
               </p>
             </div>
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
 
         {/* Certifications */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-lightGrey rounded-xl p-8 text-center flex items-center justify-center min-h-[180px]">
+          <div className="bg-bgCard rounded-xl p-8 text-center flex items-center justify-center min-h-[180px] border border-[#132A4A]">
             <img
               src="/google-partner.png"
               alt="Google Partner Badge"
@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
               loading="lazy"
             />
           </div>
-          <div className="bg-lightGrey rounded-xl p-8 text-center flex items-center justify-center min-h-[180px]">
+          <div className="bg-bgCard rounded-xl p-8 text-center flex items-center justify-center min-h-[180px] border border-[#132A4A]">
             <img
               src="/meta-certified.png"
               alt="Meta Certified Badge"

@@ -31,7 +31,7 @@ export default function MobileBottomNav({ onOpenContact }: MobileBottomNavProps)
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 bg-[#00b67a] hover:bg-[#009966] text-white font-bold py-4 transition-all duration-300 text-base uppercase tracking-wide flex items-center justify-center"
+          className="flex-1 bg-[#25D366] hover:bg-[#22c55e] text-white font-bold py-4 transition-all duration-300 text-base uppercase tracking-wide flex items-center justify-center"
         >
           Chat Now
         </a>

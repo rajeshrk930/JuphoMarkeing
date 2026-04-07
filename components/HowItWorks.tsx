@@ -56,7 +56,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="w-full bg-white py-20 md:py-32">
+    <section id="how-it-works" className="w-full bg-bgSection py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -66,10 +66,10 @@ export default function HowItWorks() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             How We Grow Your Business
           </h2>
-          <p className="text-base text-[#333333] font-medium max-w-xl mx-auto">
+          <p className="text-base text-textSecondary font-medium max-w-xl mx-auto">
             Simple 3-step process to get more customers for your Indian business. No complicated tech - just results.
           </p>
         </motion.div>
@@ -86,7 +86,7 @@ export default function HowItWorks() {
             <motion.div
               key={idx}
               variants={item}
-              className="group relative bg-white rounded-md p-6 md:p-8 hover:bg-gray-50 transition-all duration-300 border border-gray-200 shadow-sm hover:shadow-md"
+              className="group relative bg-bgCard rounded-md p-6 md:p-8 hover:bg-[#1F3A5A] transition-all duration-300 border border-[#132A4A] shadow-sm hover:shadow-md"
               whileHover={{ y: -6 }}
             >
               {/* Vertical Accent Bar */}
@@ -98,7 +98,7 @@ export default function HowItWorks() {
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                 {/* Step Number */}
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-2 border-brand flex items-center justify-center shadow-sm">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-bgSection border-2 border-brand flex items-center justify-center shadow-sm">
                     <span className="text-2xl md:text-3xl font-bold text-brand">
                       {step.number}
                     </span>
@@ -107,10 +107,10 @@ export default function HowItWorks() {
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl md:text-3xl font-bold text-black">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">
                     {step.title}
                   </h3>
-                  <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl">
+                  <p className="text-base md:text-lg text-textSecondary leading-relaxed max-w-3xl">
                     {step.description}
                   </p>
                 </div>

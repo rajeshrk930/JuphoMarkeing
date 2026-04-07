@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
       </head>
-      <body>
+      <body className="bg-bg">
         {children}
       </body>
     </html>

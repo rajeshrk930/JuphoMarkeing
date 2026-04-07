@@ -29,13 +29,13 @@ const processSteps = [
 
 export default function ClientResults() {
   return (
-    <section className="w-full bg-lightGrey py-20">
+    <section className="w-full bg-bg py-20">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4">Our Process</h2>
-          <p className="text-lg text-textGrey max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Process</h2>
+          <p className="text-lg text-textSecondary max-w-2xl mx-auto">
             A proven 4-step framework to generate qualified leads and grow your business predictably
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function ClientResults() {
           {processSteps.map((step, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-bgSection rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-[#132A4A]"
             >
               <div className="flex items-start gap-4">
                 {/* Number Badge */}
@@ -55,12 +55,12 @@ export default function ClientResults() {
                 
                 <div className="flex-1">
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold text-ink mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
                     {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-base text-textGrey leading-relaxed">
+                  <p className="text-base text-textSecondary leading-relaxed">
                     {step.description}
                   </p>
                 </div>
