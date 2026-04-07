@@ -25,20 +25,12 @@ export default function Home() {
       <Header onOpenContact={() => setIsContactModalOpen(true)} />
       <Hero onOpenContact={() => setIsContactModalOpen(true)} />
       <BrandMarquee />
-      <div id="services">
-        <Services />
-      </div>
-      <div id="how-it-works">
-        <HowItWorks />
-      </div>
-      <div id="why-choose-us">
-        <WhyChooseUs />
-      </div>
+      <Services />
+      <HowItWorks />
+      <WhyChooseUs />
       <ClientResults />
       <Testimonials />
-      <div id="faq">
-        <FAQ />
-      </div>
+      <FAQ />
       
       <Footer onOpenContact={() => setIsContactModalOpen(true)} />
       <ScrollToTop />
