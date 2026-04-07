@@ -1,22 +1,21 @@
 import React from "react";
 
 export default function WhyChooseUs() {
-  const stats = [
+  const proofCards = [
     {
-      number: "15+",
-      label: "Years of Marketing Experience"
+      icon: "📊",
+      title: "Data-Driven Strategy",
+      description: "We research your market, audience, and competitors before launching ads."
     },
     {
-      number: "100+",
-      label: "Businesses Grown Across India"
+      icon: "🎯",
+      title: "High-Converting Creatives",
+      description: "We create simple, clear ads designed to generate real leads."
     },
     {
-      number: "24/7",
-      label: "WhatsApp Support Available"
-    },
-    {
-      number: "100%",
-      label: "Transparent Reporting"
+      icon: "📈",
+      title: "Continuous Optimization",
+      description: "We monitor, test, and improve campaigns for better performance."
     }
   ];
 
@@ -27,25 +26,28 @@ export default function WhyChooseUs() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Your Trusted Performance Marketing Partner
+            Real Results. Real Growth.
           </h2>
           <p className="text-lg text-textSecondary max-w-3xl mx-auto leading-relaxed">
-            With over 15 years of experience helping brands grow online, ClickBoost specializes in creating marketing systems that drive ROI, not just traffic. Our team of certified experts ensures every campaign is built for scale, accountability, and measurable success.
+            We focus on performance-driven Meta Ads that generate real leads for businesses.
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
+        {/* Proof Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {proofCards.map((card, index) => (
             <div
               key={index}
-              className="bg-bgCard rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-[#132A4A]"
+              className="bg-bgCard rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 border border-[#132A4A]"
             >
-              <div className="text-4xl font-bold text-brand mb-2">
-                {stat.number}
+              <div className="text-5xl mb-4">
+                {card.icon}
               </div>
-              <p className="text-sm text-textSecondary font-medium">
-                {stat.label}
+              <h3 className="text-xl font-bold text-white mb-3">
+                {card.title}
+              </h3>
+              <p className="text-sm text-textSecondary leading-relaxed">
+                {card.description}
               </p>
             </div>
           ))}
