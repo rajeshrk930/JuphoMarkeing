@@ -4,40 +4,50 @@ const services = [
   {
     title: "Meta Ads Management",
     description: "",
-  price: "₹10,000",
-  priceLabel: "Starting from",
-  pricePeriod: "/month",
+    price: "₹10,000",
+    priceLabel: "Starting from",
+    pricePeriod: "/month",
+  },
   {
     title: "Ad Creative Design",
     description: "",
-  price: "Included in package",
-  priceLabel: "Included",
-  pricePeriod: "",
+    price: "Included in package",
+    priceLabel: "Included",
+    pricePeriod: "",
+  },
   {
     title: "WhatsApp Lead Generation",
     description: "",
-  price: "Included in package",
-  priceLabel: "Included",
-  pricePeriod: "",
+    price: "Included in package",
+    priceLabel: "Included",
+    pricePeriod: "",
   },
 ];
 
 export default function Services() {
+  return (
     <section id="services" className="w-full bg-bgSection py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">What We Deliver</h2>
-          <p className="text-base text-textSecondary font-medium max-w-xl mx-auto">
-            Complete Meta Ads management with creative production and automation
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">What We Deliver</h2>
+        <p className="text-base text-textSecondary font-medium max-w-xl mx-auto">
+          Complete Meta Ads management with creative production and automation
+        </p>
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
               className="group bg-bgCard rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-[#132A4A]"
-              {/* Image Header */}
-              <div className="relative h-48 overflow-hidden bg-[#132A4A]">
-                <div
+            >
+              {/* Card content here */}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url('${service.image}')` }}
                 />
