@@ -28,7 +28,7 @@ const services = [
     price: "Included in package",
     priceLabel: "Included",
     pricePeriod: "",
-    image: "/design-2.png",
+    image: "/design-2.webp",
   },
   {
     title: "WhatsApp Lead Generation",
@@ -42,7 +42,7 @@ const services = [
     price: "Included in package",
     priceLabel: "Included",
     pricePeriod: "",
-    image: "/automation-2.png",
+    image: "/automation-2.webp",
   },
 ];
 
