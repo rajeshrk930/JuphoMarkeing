@@ -60,47 +60,51 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-bgCard rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-[#132A4A]"
-            >
-              {/* Image Header */}
-              <div className="relative h-48 overflow-hidden bg-[#132A4A]">
-                <div 
-                  className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url('${service.image}')` }}
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors duration-300">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                {service.description && (
-                  <p className="text-sm text-textSecondary mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                )}
-
-                {/* Benefits List */}
-                <ul className="space-y-3 mb-6">
-                  {service.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-textSecondary">
-                      <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="leading-relaxed">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Pricing */}
+        const services = [
+          {
+            title: "Meta Ads Management",
+            description: "",
+            benefits: [
+              "Facebook & Instagram Ads",
+              "Campaign Setup",
+              "Daily Optimization",
+              "Audience Targeting",
+              "Monthly Report"
+            ],
+            price: "₹10,000",
+            priceLabel: "Starting from",
+            pricePeriod: "/month",
+            image: "/lead-generation.png" 
+          },
+          {
+            title: "Ad Creative Design",
+            description: "",
+            benefits: [
+              "Image Ad Design",
+              "Ad Copywriting",
+              "A/B Testing",
+              "Brand Consistent Creatives"
+            ],
+            price: "Included in package",
+            priceLabel: "Included",
+            pricePeriod: "",
+            image: "/design-2.png"
+          },
+          {
+            title: "WhatsApp Lead Generation",
+            description: "",
+            benefits: [
+              "Click to WhatsApp Ads",
+              "Pre-filled Message Setup",
+              "Lead Tracking",
+              "Fast Response Strategy"
+            ],
+            price: "Included in package",
+            priceLabel: "Included",
+            pricePeriod: "",
+            image: "/automation-2.png"
+          }
+        ];
                 <div className="pt-4 border-t border-[#132A4A]">
                   <div className="inline-block px-3 py-1 rounded-md mb-2" style={{ backgroundColor: '#FF7A00' }}>
                     <span className="text-xs font-semibold text-white uppercase tracking-wide">
