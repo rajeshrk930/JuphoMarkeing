@@ -9,12 +9,12 @@ const services = [
       "Campaign Setup",
       "Daily Optimization",
       "Audience Targeting",
-      "Monthly Report"
+      "Monthly Report",
     ],
     price: "₹10,000",
     priceLabel: "Starting from",
     pricePeriod: "/month",
-    image: "/lead-generation.png"
+    image: "/lead-generation.png",
   },
   {
     title: "Ad Creative Design",
@@ -23,12 +23,12 @@ const services = [
       "Image Ad Design",
       "Ad Copywriting",
       "A/B Testing",
-      "Brand Consistent Creatives"
+      "Brand Consistent Creatives",
     ],
     price: "Included in package",
     priceLabel: "Included",
     pricePeriod: "",
-    image: "/design-2.png"
+    image: "/design-2.png",
   },
   {
     title: "WhatsApp Lead Generation",
@@ -37,13 +37,13 @@ const services = [
       "Click to WhatsApp Ads",
       "Pre-filled Message Setup",
       "Lead Tracking",
-      "Fast Response Strategy"
+      "Fast Response Strategy",
     ],
     price: "Included in package",
     priceLabel: "Included",
     pricePeriod: "",
-    image: "/automation-2.png"
-  }
+    image: "/automation-2.png",
+  },
 ];
 
 export default function Services() {
