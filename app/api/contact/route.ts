@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import twilio from 'twilio';
 
 // Placeholder Google Apps Script web app endpoint; replace with env var
 const SCRIPT_ENDPOINT = process.env.GOOGLE_SCRIPT_ENDPOINT || 'https://script.google.com/macros/s/REPLACE_DEPLOY_ID/exec';
@@ -10,32 +9,28 @@ const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
 const TWILIO_WHATSAPP_FROM = process.env.TWILIO_WHATSAPP_FROM; // e.g., 'whatsapp:+14155238886'
 const WHATSAPP_TO = process.env.WHATSAPP_TO; // e.g., 'whatsapp:+919876543210'
 
-// Initialize Twilio client
-let twilioClient: ReturnType<typeof twilio> | null = null;
-if (TWILIO_ACCOUNT_SID && TWILIO_AUTH_TOKEN) {
-  twilioClient = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
-}
+// Initialize Twilio client lazily to avoid build-time instantiation
+let twilioClient: any = null;
 
 async function sendWhatsAppNotification(leadData: any) {
-  if (!twilioClient || !TWILIO_WHATSAPP_FROM || !WHATSAPP_TO) {
-    console.log('WhatsApp notifications not configured');
+  if (!TWILIO_ACCOUNT_SID || !TWILIO_AUTH_TOKEN || !TWILIO_WHATSAPP_FROM || !WHATSAPP_TO) {
+    console.log('WhatsApp notifications not configured (missing env vars)');
+    return;
+  }
+
+  // Basic validation to avoid Twilio from throwing during build when SID is malformed
+  if (!/^AC/.test(TWILIO_ACCOUNT_SID)) {
+    console.log('Invalid Twilio Account SID format; skipping WhatsApp notification');
     return;
   }
 
   try {
-    const message = `🎉 *New Lead Received!*
+    // Require and instantiate Twilio client lazily
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const twilioLib = require('twilio');
+    twilioClient = twilioClient || twilioLib(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
-👤 *Name:* ${leadData.name}
-📧 *Email:* ${leadData.email}
-📱 *Phone:* ${leadData.phone || 'Not provided'}
-🌐 *Website:* ${leadData.website || 'Not provided'}
-💰 *Budget:* ${leadData.spend}
-💬 *Message:* ${leadData.message || 'No message'}
-
-🕐 *Time:* ${new Date().toLocaleString()}
-
----
-_ClickBoost Lead Dashboard_`;
+    const message = `🎉 *New Lead Received!*\n\n👤 *Name:* ${leadData.name}\n📧 *Email:* ${leadData.email}\n📱 *Phone:* ${leadData.phone || 'Not provided'}\n🌐 *Website:* ${leadData.website || 'Not provided'}\n💰 *Budget:* ${leadData.spend}\n💬 *Message:* ${leadData.message || 'No message'}\n\n🕐 *Time:* ${new Date().toLocaleString()}\n\n---\n_ClickBoost Lead Dashboard_`;
 
     await twilioClient.messages.create({
       from: TWILIO_WHATSAPP_FROM,
@@ -45,7 +40,7 @@ _ClickBoost Lead Dashboard_`;
 
     console.log('WhatsApp notification sent successfully');
   } catch (error: any) {
-    console.error('Failed to send WhatsApp notification:', error.message);
+    console.error('Failed to send WhatsApp notification:', error?.message || error);
     // Don't fail the entire request if WhatsApp fails
   }
 }
