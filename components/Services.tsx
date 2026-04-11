@@ -14,7 +14,7 @@ const services = [
     price: "₹10,000",
     priceLabel: "Starting from",
     pricePeriod: "/month",
-    image: "/lead-generation.png",
+    image: "/lead-generation.webp",
   },
   {
     title: "Ad Creative Design",
