@@ -7,28 +7,28 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "How fast can I see results from Meta Ads?",
-      answer: "You usually see traction within the first 7–10 days. Real optimization takes 2–4 weeks as the system learns and your audience stabilizes."
+      question: "How fast can I see results from Meta Ads Management?",
+      answer: "Most clients see initial leads within 7–10 days; meaningful performance improvements usually take 2–4 weeks as campaigns optimize."
     },
     {
       question: "What industries do you work with?",
-      answer: "Real estate, education, coaching, ecommerce, salons, restaurants, and local service businesses. Lead-generation focused niches perform best."
+      answer: "We work with local and national businesses across real estate, education, coaching, ecommerce, salons, restaurants, and other lead-focused industries. Campaigns for lead-generation niches typically perform best."
     },
     {
-      question: "Do you provide content or do I need to share creatives?",
-      answer: "We handle ad creatives, copy, and strategy. If you have brand assets, we use them. If not, we create everything from scratch."
+      question: "Do you provide creatives or do I need to supply them?",
+      answer: "Our Ad Creative Design team produces image and video ads, headlines, and ad copy. Share brand assets if available; if not, we’ll design on-brand creatives for you."
     },
     {
       question: "How does AI automation help my business?",
-      answer: "Instant replies, faster follow-up, and structured workflows turn more leads into paying customers. It reduces manual work and increases conversion rates."
+      answer: "AI automation enables instant replies, pre-filled WhatsApp messages, and structured follow-up workflows—converting more leads while reducing manual work."
     },
     {
       question: "What is included in website development?",
-      answer: "A responsive design, fast performance, SEO basics, integrations, and a clean UI. You get a landing page built to convert paid traffic."
+      answer: "A responsive, conversion-focused landing page with fast performance, tracking and integrations (analytics, WhatsApp), and a clear UI built for paid traffic."
     },
     {
       question: "What are the monthly charges after setup?",
-      answer: "Ads management has a fixed monthly fee. Automation and website hosting have minimal maintenance charges depending on usage and integrations."
+      answer: "Meta Ads Management is billed monthly. Creative production and WhatsApp automation may be included depending on your package; final pricing depends on ad spend and selected services — we’ll provide a tailored quote."
     }
   ];
 
