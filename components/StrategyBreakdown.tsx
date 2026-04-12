@@ -1,8 +1,16 @@
 import React from "react";
 
-const whatsappLink =
-  process.env.NEXT_PUBLIC_WHATSAPP_LINK ||
-  `https://wa.me/919652118590?text=${encodeURIComponent("Hi! I'm interested in your marketing services.")}`;
+const PRE_FILLED_MESSAGE = "Hi Rajesh, I saw your ClickBoost Strategy Breakdown and want to get more leads for my coaching institute.";
+const whatsappNumber = "919652118590"; // default site number
+const envLink = process.env.NEXT_PUBLIC_WHATSAPP_LINK;
+
+let whatsappLink: string;
+if (envLink) {
+  const encoded = encodeURIComponent(PRE_FILLED_MESSAGE);
+  whatsappLink = envLink.includes("?") ? `${envLink}&text=${encoded}` : `${envLink}?text=${encoded}`;
+} else {
+  whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(PRE_FILLED_MESSAGE)}`;
+}
 
 export default function StrategyBreakdown() {
   return (
