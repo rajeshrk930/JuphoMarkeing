@@ -136,6 +136,8 @@ export default function AdminDashboard() {
       if (!data || !data.secure_url) throw new Error('Cloudinary upload failed');
 
       // Save to Supabase database
+      if (!supabase) throw new Error('Database not configured - please add Supabase env variables to Vercel');
+
       const { data: newResult, error: dbError } = await supabase
         .from('ad_results')
         .insert({

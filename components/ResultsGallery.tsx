@@ -24,6 +24,12 @@ export default function ResultsGallery({ showDelete = false }: Props) {
   useEffect(() => {
     // Load results from Supabase
     const fetchResults = async () => {
+      if (!supabase) {
+        console.warn('Supabase not configured');
+        setLoading(false);
+        return;
+      }
+
       const { data, error } = await supabase
         .from('ad_results')
         .select('*')
@@ -52,6 +58,11 @@ export default function ResultsGallery({ showDelete = false }: Props) {
   const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this result?')) return;
     
+    if (!supabase) {
+      alert('Database not configured');
+      return;
+    }
+
     const { error } = await supabase
       .from('ad_results')
       .delete()
