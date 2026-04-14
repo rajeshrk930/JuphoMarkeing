@@ -1,15 +1,16 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { supabase } from '../lib/supabase';
 
 type Result = {
   id: string;
-  imageUrl: string;
-  clientName?: string;
-  campaign?: string;
-  metric?: string;
-  date?: string;
-  caption?: string;
+  image_url: string;
+  client_name?: string | null;
+  campaign?: string | null;
+  metric?: string | null;
+  created_at?: string;
+  caption?: string | null;
 };
 
 type Props = {
@@ -21,17 +22,22 @@ export default function ResultsGallery({ showDelete = false }: Props) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load results from localStorage (temporary solution for serverless)
-    const savedResults = localStorage.getItem('uploadedResults');
-    if (savedResults) {
-      try {
-        const parsed = JSON.parse(savedResults);
-        setResults(Array.isArray(parsed) ? parsed : []);
-      } catch (e) {
-        console.error('Error parsing results:', e);
+    // Load results from Supabase
+    const fetchResults = async () => {
+      const { data, error } = await supabase
+        .from('ad_results')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('Error fetching results:', error);
+      } else {
+        setResults(data || []);
       }
-    }
-    setLoading(false);
+      setLoading(false);
+    };
+
+    fetchResults();
 
     // Listen for new uploads
     const handleNewUpload = (event: CustomEvent) => {
@@ -43,12 +49,19 @@ export default function ResultsGallery({ showDelete = false }: Props) {
     return () => window.removeEventListener('newResultUploaded' as any, handleNewUpload);
   }, []);
 
-  const handleDelete = (id: string) => {
+  const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this result?')) return;
     
-    const updatedResults = results.filter(r => r.id !== id);
-    setResults(updatedResults);
-    localStorage.setItem('uploadedResults', JSON.stringify(updatedResults));
+    const { error } = await supabase
+      .from('ad_results')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      alert('Error deleting: ' + error.message);
+    } else {
+      setResults(results.filter(r => r.id !== id));
+    }
   };
 
   if (loading) {
@@ -73,9 +86,9 @@ export default function ResultsGallery({ showDelete = false }: Props) {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {results.map((r) => (
         <div key={r.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow relative group">
-          <img src={r.imageUrl} alt={r.caption || r.clientName || 'Result'} className="w-full h-64 object-cover" />
+          <img src={r.image_url} alt={r.caption || r.client_name || 'Result'} className="w-full h-64 object-cover" />
           <div className="p-4">
-            {r.clientName && <div className="text-sm font-semibold text-gray-900 mb-1">{r.clientName}</div>}
+            {r.client_name && <div className="text-sm font-semibold text-gray-900 mb-1">{r.client_name}</div>}
             {r.campaign && <div className="text-xs text-gray-500 mb-2">{r.campaign}</div>}
             {r.metric && <div className="text-sm text-blue-600 font-medium mb-2">{r.metric}</div>}
             {r.caption && <div className="text-xs text-gray-600 mt-2">{r.caption}</div>}

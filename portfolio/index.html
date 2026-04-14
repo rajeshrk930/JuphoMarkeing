@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — ClickBoost Proofs</title>
+    <meta name="description" content="Live performance data from our recent Meta Ad campaigns." />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-bg': '#0b0c10',
+              'card-bg': '#071018',
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* small helpers for subtle borders and image placeholders */
+      :root{
+        --border: rgba(255,255,255,0.04);
+        --muted: rgba(255,255,255,0.55);
+      }
+      .placeholder-image{ background: linear-gradient(90deg,#0f1724 0%, #0b1220 100%); }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white antialiased">
+    <main class="min-h-screen flex flex-col">
+      <header class="w-full">
+        <div class="max-w-5xl mx-auto px-6 py-20">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">We don't guess. We engineer daily leads.</h1>
+          <p class="mt-4 text-gray-400 text-lg">Live performance data from our recent Meta Ad campaigns.</p>
+        </div>
+      </header>
+
+      <section class="w-full">
+        <div class="max-w-5xl mx-auto px-6 pb-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Card 1 -->
+            <article class="bg-[#071018] border" style="border-color: var(--border); border-width:1px; border-style:solid; border-radius:12px; overflow:hidden;">
+              <figure class="w-full h-48 bg-cover bg-center placeholder-image">
+                <img src="https://via.placeholder.com/1200x700?text=Ads+Manager+Screenshot" alt="Ads Manager screenshot" class="w-full h-48 object-cover" />
+              </figure>
+              <div class="p-6">
+                <p class="text-sm text-gray-400">Industry: B2B / Local Service</p>
+                <p class="mt-2 text-sm text-gray-400">The Problem: High ad spend with zero qualified leads.</p>
+                <p class="mt-4 text-white font-semibold">The ClickBoost Solution: Generated 48 high-intent WhatsApp leads at just ₹6.25 each.</p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="bg-[#071018] border" style="border-color: var(--border); border-width:1px; border-style:solid; border-radius:12px; overflow:hidden;">
+              <figure class="w-full h-48 bg-cover bg-center placeholder-image">
+                <img src="https://via.placeholder.com/1200x700?text=Ads+Manager+Screenshot" alt="Ads Manager screenshot" class="w-full h-48 object-cover" />
+              </figure>
+              <div class="p-6">
+                <p class="text-sm text-gray-400">Industry: B2B / Local Service</p>
+                <p class="mt-2 text-sm text-gray-400">The Problem: High ad spend with zero qualified leads.</p>
+                <p class="mt-4 text-white font-semibold">The ClickBoost Solution: Scaled client volume with 70 direct WhatsApp leads at ₹9.69 each.</p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="bg-[#071018] border" style="border-color: var(--border); border-width:1px; border-style:solid; border-radius:12px; overflow:hidden;">
+              <figure class="w-full h-48 bg-cover bg-center placeholder-image">
+                <img src="https://via.placeholder.com/1200x700?text=Ads+Manager+Screenshot" alt="Ads Manager screenshot" class="w-full h-48 object-cover" />
+              </figure>
+              <div class="p-6">
+                <p class="text-sm text-gray-400">Industry: B2B / Local Service</p>
+                <p class="mt-2 text-sm text-gray-400">The Problem: High ad spend with zero qualified leads.</p>
+                <p class="mt-4 text-white font-semibold">The ClickBoost Solution: Massive volume: 244 WhatsApp messaging conversations at ₹12.84 CPL.</p>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="bg-[#071018] border" style="border-color: var(--border); border-width:1px; border-style:solid; border-radius:12px; overflow:hidden;">
+              <figure class="w-full h-48 bg-cover bg-center placeholder-image">
+                <img src="https://via.placeholder.com/1200x700?text=Ads+Manager+Screenshot" alt="Ads Manager screenshot" class="w-full h-48 object-cover" />
+              </figure>
+              <div class="p-6">
+                <p class="text-sm text-gray-400">Industry: B2B / Local Service</p>
+                <p class="mt-2 text-sm text-gray-400">The Problem: High ad spend with zero qualified leads.</p>
+                <p class="mt-4 text-white font-semibold">The ClickBoost Solution: Consistent B2B pipeline generation at ₹14.87 per lead.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <footer class="w-full mt-auto">
+        <div class="max-w-5xl mx-auto px-6 py-12 flex justify-center">
+          <a href="#" class="inline-flex items-center justify-center bg-white text-black rounded-full px-6 py-3 font-semibold shadow-lg hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">Claim Your Custom Lead Strategy Session</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

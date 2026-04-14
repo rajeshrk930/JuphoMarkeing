@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import ResultsGallery from "../../components/ResultsGallery";
+import { supabase } from "../../lib/supabase";
 
 interface Lead {
   Timestamp: string;
@@ -134,26 +135,25 @@ export default function AdminDashboard() {
       const data = await res.json();
       if (!data || !data.secure_url) throw new Error('Cloudinary upload failed');
 
-      // Save to localStorage (temporary solution for serverless)
-      const newResult = {
-        id: Date.now().toString(),
-        imageUrl: data.secure_url,
-        clientName: clientNameUpload || '',
-        campaign: campaignUpload || '',
-        metric: metricUpload || '',
-        caption: captionUpload || '',
-        date: new Date().toISOString(),
-      };
+      // Save to Supabase database
+      const { data: newResult, error: dbError } = await supabase
+        .from('ad_results')
+        .insert({
+          image_url: data.secure_url,
+          client_name: clientNameUpload || null,
+          campaign: campaignUpload || null,
+          metric: metricUpload || null,
+          caption: captionUpload || null,
+        })
+        .select()
+        .single();
 
-      const savedResults = localStorage.getItem('uploadedResults');
-      const results = savedResults ? JSON.parse(savedResults) : [];
-      results.unshift(newResult);
-      localStorage.setItem('uploadedResults', JSON.stringify(results));
+      if (dbError) throw new Error('Database save failed: ' + dbError.message);
 
       // Notify results page of new upload
       window.dispatchEvent(new CustomEvent('newResultUploaded', { detail: newResult }));
 
-      alert('Upload successful! ✅\nImage uploaded to Cloudinary.');
+      alert('Upload successful! ✅\nImage uploaded and saved to database.');
       
       // Reset form
       setUploadFile(null);
