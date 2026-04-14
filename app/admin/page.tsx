@@ -29,6 +29,12 @@ export default function AdminDashboard() {
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [budgetFilter, setBudgetFilter] = useState("all");
+  const [uploading, setUploading] = useState(false);
+  const [uploadFile, setUploadFile] = useState<File | null>(null);
+  const [clientNameUpload, setClientNameUpload] = useState("");
+  const [campaignUpload, setCampaignUpload] = useState("");
+  const [metricUpload, setMetricUpload] = useState("");
+  const [captionUpload, setCaptionUpload] = useState("");
 
   // Search and filter effect
   useEffect(() => {
@@ -78,6 +84,58 @@ export default function AdminDashboard() {
       fetchLeads(password);
     } else {
       setError("Invalid password");
+    }
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const f = e.target.files && e.target.files[0];
+    if (f) setUploadFile(f);
+  };
+
+  const handleUpload = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!uploadFile) return alert('Please select a file');
+    setUploading(true);
+
+    try {
+      const formData = new FormData();
+      formData.append('file', uploadFile);
+      formData.append('clientName', clientNameUpload);
+      formData.append('campaign', campaignUpload);
+      formData.append('metric', metricUpload);
+      formData.append('caption', captionUpload);
+
+      const res = await fetch('/api/admin/results', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${password}`,
+        },
+        body: formData,
+      });
+
+      const data = await res.json();
+      
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Upload failed');
+      }
+
+      alert('Upload successful! ✅');
+      
+      // Reset form
+      setUploadFile(null);
+      setClientNameUpload('');
+      setCampaignUpload('');
+      setMetricUpload('');
+      setCaptionUpload('');
+      
+      // Clear file input
+      const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+      if (fileInput) fileInput.value = '';
+      
+    } catch (err: any) {
+      alert('Error: ' + (err.message || 'Upload failed'));
+    } finally {
+      setUploading(false);
     }
   };
 
@@ -262,6 +320,45 @@ export default function AdminDashboard() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {/* Upload Results */}
+        <div className="bg-white rounded-xl shadow-md p-6 mb-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Upload Client Result</h3>
+          <form onSubmit={handleUpload} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="sm:col-span-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Screenshot</label>
+              <input type="file" accept="image/*" onChange={handleFileChange} />
+            </div>
+
+            <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Client name</label>
+                <input value={clientNameUpload} onChange={(e) => setClientNameUpload(e.target.value)} className="w-full px-3 py-2 border rounded" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Campaign</label>
+                <input value={campaignUpload} onChange={(e) => setCampaignUpload(e.target.value)} className="w-full px-3 py-2 border rounded" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Metric (e.g. CPL: $5)</label>
+                <input value={metricUpload} onChange={(e) => setMetricUpload(e.target.value)} className="w-full px-3 py-2 border rounded" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Caption</label>
+                <input value={captionUpload} onChange={(e) => setCaptionUpload(e.target.value)} className="w-full px-3 py-2 border rounded" />
+              </div>
+            </div>
+
+            <div className="sm:col-span-3 flex items-center gap-3 mt-2">
+              <button type="submit" disabled={uploading} className="bg-[#00b67a] text-white px-4 py-2 rounded hover:bg-[#009966]">
+                {uploading ? 'Uploading...' : 'Upload Result'}
+              </button>
+              <p className="text-sm text-gray-500">Images are uploaded to Cloudinary. Make sure `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` and `NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET` are set.</p>
+            </div>
+          </form>
+        </div>
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-xl shadow-md p-5 border-l-4 border-[#00b67a]">
