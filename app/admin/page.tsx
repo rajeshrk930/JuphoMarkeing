@@ -36,6 +36,16 @@ export default function AdminDashboard() {
   const [metricUpload, setMetricUpload] = useState("");
   const [captionUpload, setCaptionUpload] = useState("");
 
+  // Check for saved session on mount
+  useEffect(() => {
+    const savedPassword = localStorage.getItem('adminPassword');
+    if (savedPassword === 'jupho2025') {
+      setPassword(savedPassword);
+      setIsAuthenticated(true);
+      fetchLeads(savedPassword);
+    }
+  }, []);
+
   // Search and filter effect
   useEffect(() => {
     let result = [...leads];
@@ -81,10 +91,18 @@ export default function AdminDashboard() {
     
     if (password === "jupho2025") {
       setIsAuthenticated(true);
+      localStorage.setItem('adminPassword', password); // Save session
       fetchLeads(password);
     } else {
       setError("Invalid password");
     }
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setLeads([]);
+    setPassword("");
+    localStorage.removeItem('adminPassword'); // Clear session
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -285,7 +303,18 @@ export default function AdminDashboard() {
               <h1 className="text-2xl sm:text-3xl font-bold">Lead Dashboard</h1>
               <p className="text-gray-300 text-sm mt-1">Manage your incoming leads</p>
             </div>
-            <div className="flex items-center gap-3 w-full sm:w-auto">
+            <div className="flex items-center gap-3 w-full sm:w-auto flex-wrap">
+              <a
+                href="/results"
+                target="_blank"
+                className="flex-1 sm:flex-initial bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                View Results
+              </a>
               <button
                 onClick={exportToCSV}
                 className="flex-1 sm:flex-initial bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-sm"
@@ -305,11 +334,7 @@ export default function AdminDashboard() {
                 Refresh
               </button>
               <button
-                onClick={() => {
-                  setIsAuthenticated(false);
-                  setLeads([]);
-                  setPassword("");
-                }}
+                onClick={handleLogout}
                 className="hidden sm:block bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg font-medium transition-colors text-sm"
               >
                 Logout

@@ -44,6 +44,12 @@ export default function Header({ onOpenContact }: HeaderProps) {
             >
               Our Process
             </button>
+            <a
+              href="/results"
+              className="text-white hover:text-[#FF7A00] transition-colors duration-200 font-medium"
+            >
+              Our Results
+            </a>
             <button
               onClick={() => scrollToSection("why-choose-us")}
               className="text-white hover:text-[#FF7A00] transition-colors duration-200 font-medium"
@@ -104,6 +110,12 @@ export default function Header({ onOpenContact }: HeaderProps) {
             >
               Our Process
             </button>
+            <a
+              href="/results"
+              className="block w-full text-left text-white hover:text-[#FF7A00] transition-colors duration-200 font-medium py-2"
+            >
+              Our Results
+            </a>
             <button
               onClick={() => scrollToSection("why-choose-us")}
               className="block w-full text-left text-white hover:text-[#FF7A00] transition-colors duration-200 font-medium py-2"
