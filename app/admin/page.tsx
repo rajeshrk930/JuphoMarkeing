@@ -123,6 +123,7 @@ export default function AdminDashboard() {
       const fd = new FormData();
       fd.append('file', uploadFile);
       fd.append('upload_preset', uploadPreset);
+      fd.append('folder', 'ads');
 
       const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`, {
         method: 'POST',
@@ -132,30 +133,26 @@ export default function AdminDashboard() {
       const data = await res.json();
       if (!data || !data.secure_url) throw new Error('Cloudinary upload failed');
 
-      // Save metadata to your API
-      const payload = {
+      // Save to localStorage (temporary solution for serverless)
+      const newResult = {
+        id: Date.now().toString(),
         imageUrl: data.secure_url,
-        clientName: clientNameUpload,
-        campaign: campaignUpload,
-        metric: metricUpload,
-        caption: captionUpload,
+        clientName: clientNameUpload || '',
+        campaign: campaignUpload || '',
+        metric: metricUpload || '',
+        caption: captionUpload || '',
+        date: new Date().toISOString(),
       };
 
-      const r2 = await fetch('/api/admin/results', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${password}`,
-        },
-        body: JSON.stringify(payload),
-      });
+      const savedResults = localStorage.getItem('uploadedResults');
+      const results = savedResults ? JSON.parse(savedResults) : [];
+      results.unshift(newResult);
+      localStorage.setItem('uploadedResults', JSON.stringify(results));
 
-      if (!r2.ok) {
-        const err = await r2.json();
-        throw new Error(err?.error || 'Failed to save metadata');
-      }
+      // Notify results page of new upload
+      window.dispatchEvent(new CustomEvent('newResultUploaded', { detail: newResult }));
 
-      alert('Upload successful! ✅');
+      alert('Upload successful! ✅\nImage uploaded to Cloudinary.');
       
       // Reset form
       setUploadFile(null);

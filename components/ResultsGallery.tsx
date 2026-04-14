@@ -14,27 +14,58 @@ type Result = {
 
 export default function ResultsGallery() {
   const [results, setResults] = useState<Result[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/results')
-      .then((r) => r.json())
-      .then((d) => {
-        if (d.ok && Array.isArray(d.results)) setResults(d.results);
-      })
-      .catch(console.error);
+    // Load results from localStorage (temporary solution for serverless)
+    const savedResults = localStorage.getItem('uploadedResults');
+    if (savedResults) {
+      try {
+        const parsed = JSON.parse(savedResults);
+        setResults(Array.isArray(parsed) ? parsed : []);
+      } catch (e) {
+        console.error('Error parsing results:', e);
+      }
+    }
+    setLoading(false);
+
+    // Listen for new uploads
+    const handleNewUpload = (event: CustomEvent) => {
+      const newResult = event.detail;
+      setResults(prev => [newResult, ...prev]);
+    };
+
+    window.addEventListener('newResultUploaded' as any, handleNewUpload);
+    return () => window.removeEventListener('newResultUploaded' as any, handleNewUpload);
   }, []);
 
-  if (!results.length) return <div className="p-8 text-center text-gray-500">No results yet</div>;
+  if (loading) {
+    return <div className="p-8 text-center text-gray-500">Loading results...</div>;
+  }
+
+  if (!results.length) {
+    return (
+      <div className="p-12 text-center">
+        <div className="text-gray-400 mb-4">
+          <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <p className="text-lg font-medium">No results yet</p>
+          <p className="text-sm mt-2">Upload your first ad result from the admin panel</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {results.map((r) => (
-        <div key={r.id} className="bg-white rounded-lg shadow overflow-hidden">
-          <img src={r.imageUrl} alt={r.caption || r.clientName || 'Result'} className="w-full h-56 object-cover" />
-          <div className="p-3">
-            <div className="text-sm font-semibold text-gray-900">{r.clientName}</div>
-            <div className="text-xs text-gray-500">{r.campaign}</div>
-            <div className="text-sm text-gray-700 mt-2">{r.metric}</div>
+        <div key={r.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <img src={r.imageUrl} alt={r.caption || r.clientName || 'Result'} className="w-full h-64 object-cover" />
+          <div className="p-4">
+            {r.clientName && <div className="text-sm font-semibold text-gray-900 mb-1">{r.clientName}</div>}
+            {r.campaign && <div className="text-xs text-gray-500 mb-2">{r.campaign}</div>}
+            {r.metric && <div className="text-sm text-blue-600 font-medium mb-2">{r.metric}</div>}
             {r.caption && <div className="text-xs text-gray-600 mt-2">{r.caption}</div>}
           </div>
         </div>
