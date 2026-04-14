@@ -137,7 +137,11 @@ export default function ResultsGallery({ showDelete = false }: Props) {
                 {r.metric}
               </div>
             )}
-            {r.caption && <div className="text-xs text-gray-400 mt-3 line-clamp-2">{r.caption}</div>}
+            {r.caption && (
+              <div className="text-sm text-gray-300 mt-3 leading-relaxed">
+                {r.caption}
+              </div>
+            )}
           </div>
           
           {/* Admin Delete Button */}
