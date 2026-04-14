@@ -115,26 +115,44 @@ export default function AdminDashboard() {
     if (!uploadFile) return alert('Please select a file');
     setUploading(true);
 
-    try {
-      const formData = new FormData();
-      formData.append('file', uploadFile);
-      formData.append('clientName', clientNameUpload);
-      formData.append('campaign', campaignUpload);
-      formData.append('metric', metricUpload);
-      formData.append('caption', captionUpload);
+    const cloudName = 'dzbscdr3f';
+    const uploadPreset = 'jupho-ads';
 
-      const res = await fetch('/api/admin/results', {
+    try {
+      // Upload to Cloudinary
+      const fd = new FormData();
+      fd.append('file', uploadFile);
+      fd.append('upload_preset', uploadPreset);
+
+      const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`, {
         method: 'POST',
-        headers: {
-          Authorization: `Bearer ${password}`,
-        },
-        body: formData,
+        body: fd,
       });
 
       const data = await res.json();
-      
-      if (!res.ok || !data.ok) {
-        throw new Error(data.error || 'Upload failed');
+      if (!data || !data.secure_url) throw new Error('Cloudinary upload failed');
+
+      // Save metadata to your API
+      const payload = {
+        imageUrl: data.secure_url,
+        clientName: clientNameUpload,
+        campaign: campaignUpload,
+        metric: metricUpload,
+        caption: captionUpload,
+      };
+
+      const r2 = await fetch('/api/admin/results', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${password}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!r2.ok) {
+        const err = await r2.json();
+        throw new Error(err?.error || 'Failed to save metadata');
       }
 
       alert('Upload successful! ✅');
