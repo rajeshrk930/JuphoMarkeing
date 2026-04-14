@@ -12,10 +12,13 @@ type Result = {
   caption?: string;
 };
 
-export default function ResultsGallery() {
+type Props = {
+  showDelete?: boolean;
+};
+
+export default function ResultsGallery({ showDelete = false }: Props) {
   const [results, setResults] = useState<Result[]>([]);
   const [loading, setLoading] = useState(true);
-  const [showAdmin, setShowAdmin] = useState(false);
 
   useEffect(() => {
     // Load results from localStorage (temporary solution for serverless)
@@ -29,10 +32,6 @@ export default function ResultsGallery() {
       }
     }
     setLoading(false);
-
-    // Check if admin is logged in
-    const isAdmin = localStorage.getItem('adminPassword') === 'jupho2025';
-    setShowAdmin(isAdmin);
 
     // Listen for new uploads
     const handleNewUpload = (event: CustomEvent) => {
@@ -83,7 +82,7 @@ export default function ResultsGallery() {
           </div>
           
           {/* Admin Delete Button */}
-          {showAdmin && (
+          {showDelete && (
             <button
               onClick={() => handleDelete(r.id)}
               className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"

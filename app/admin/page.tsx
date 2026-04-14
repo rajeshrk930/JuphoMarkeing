@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import ResultsGallery from "../../components/ResultsGallery";
 
 interface Lead {
   Timestamp: string;
@@ -319,17 +320,6 @@ export default function AdminDashboard() {
               <p className="text-gray-300 text-sm mt-1">Manage your incoming leads</p>
             </div>
             <div className="flex items-center gap-3 w-full sm:w-auto flex-wrap">
-              <a
-                href="/results"
-                target="_blank"
-                className="flex-1 sm:flex-initial bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-sm"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-                View Results
-              </a>
               <button
                 onClick={exportToCSV}
                 className="flex-1 sm:flex-initial bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-sm"
@@ -399,6 +389,14 @@ export default function AdminDashboard() {
             </div>
           </form>
         </div>
+
+        {/* Uploaded Results - Manage & Delete */}
+        <div className="bg-white rounded-xl shadow-md p-6 mb-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Manage Uploaded Results</h3>
+          <p className="text-sm text-gray-600 mb-4">Hover over any result to see delete option</p>
+          <ResultsGallery showDelete={true} />
+        </div>
+
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-xl shadow-md p-5 border-l-4 border-[#00b67a]">
