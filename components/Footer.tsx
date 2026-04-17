@@ -8,7 +8,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
   const year = new Date().getFullYear();
   
   return (
-    <footer className="w-full text-white py-8 pb-24 md:pb-8" style={{ backgroundColor: '#0B1F3A' }}>
+    <footer className="w-full text-white py-8 pb-24 md:pb-8" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-4xl mx-auto px-4 text-center">
         
         {/* CTA Heading */}

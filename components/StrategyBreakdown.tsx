@@ -28,9 +28,9 @@ export default function StrategyBreakdown() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Step 1 */}
-          <div className="bg-[#132A4A] rounded-lg p-6 flex flex-col h-full">
+          <div className="bg-[#1a1a1a] rounded-lg p-6 flex flex-col h-full border border-[#333333]">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0F3350] mr-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#2a2a2a] mr-4">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="10" stroke="#FF7A00" strokeWidth="1.5" />
                   <path d="M12 8v4l2 2" stroke="#FF7A00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -53,9 +53,9 @@ export default function StrategyBreakdown() {
           </div>
 
           {/* Step 2 */}
-          <div className="bg-[#132A4A] rounded-lg p-6 flex flex-col h-full">
+          <div className="bg-[#1a1a1a] rounded-lg p-6 flex flex-col h-full border border-[#333333]">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0F3350] mr-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#2a2a2a] mr-4">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 7h18" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
                   <path d="M6 12h12" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
@@ -79,9 +79,9 @@ export default function StrategyBreakdown() {
           </div>
 
           {/* Step 3 */}
-          <div className="bg-[#132A4A] rounded-lg p-6 flex flex-col h-full">
+          <div className="bg-[#1a1a1a] rounded-lg p-6 flex flex-col h-full border border-[#333333]">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0F3350] mr-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#2a2a2a] mr-4">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2v20" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
                   <path d="M5 12h14" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />

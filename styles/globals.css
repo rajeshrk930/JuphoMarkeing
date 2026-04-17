@@ -12,16 +12,16 @@ html, body {
   /* Primary - Orange (CTA/Action) */
   --primary: #FF7A00;
   --primary-dark: #FF9A2A;
-  --primary-light: #4FC3FF;
+  --primary-light: #FF6A00;
   
-  /* Background - Dark Blue */
-  --bg: #0B1F3A;
-  --bg-section: #132A4A;
-  --bg-card: #1F3A5A;
+  /* Background - Black Theme */
+  --bg: #000000;
+  --bg-section: #1a1a1a;
+  --bg-card: #1a1a1a;
   
-  /* Accent - Blue (Tech Feel) */
+  /* Accent - Orange (Brand Consistency) */
   --accent-blue: #FF6A00;
-  --accent-blue-light: #4FC3FF;
+  --accent-blue-light: #FF9A2A;
   
   /* Text - Light for Dark Theme */
   --text-primary: #FFFFFF;
@@ -30,7 +30,7 @@ html, body {
   
   /* Legacy compatibility */
   --black: #FFFFFF;
-  --light-grey: #132A4A;
+  --light-grey: #333333;
 }
 
 /* Utility helpers mapping CSS vars */
