@@ -48,11 +48,11 @@ export default function FAQ() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-5xl mx-auto space-y-0 border-t border-[#00AEEF]/30">
+        <div className="max-w-5xl mx-auto space-y-0 border-t border-[#FF6A00]/30">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b border-[#00AEEF]/30"
+              className="border-b border-[#FF6A00]/30"
             >
               {/* Question Button */}
               <button
@@ -66,7 +66,7 @@ export default function FAQ() {
                 {/* Chevron Icon */}
                 <div className="flex-shrink-0">
                   <svg 
-                    className={`w-5 h-5 text-[#00AEEF] transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`} 
+                    className={`w-5 h-5 text-[#FF6A00] transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`} 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"

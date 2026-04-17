@@ -14,7 +14,7 @@ if (envLink) {
 
 export default function StrategyBreakdown() {
   return (
-    <section id="strategy" className="w-full bg-[#0B1F3A] py-16">
+    <section id="strategy" className="w-full bg-black py-16">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -57,9 +57,9 @@ export default function StrategyBreakdown() {
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0F3350] mr-4">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 7h18" stroke="#00AEEF" strokeWidth="1.5" strokeLinecap="round" />
-                  <path d="M6 12h12" stroke="#00AEEF" strokeWidth="1.5" strokeLinecap="round" />
-                  <path d="M10 17h4" stroke="#00AEEF" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M3 7h18" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M6 12h12" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M10 17h4" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white">WhatsApp Lead Filtering</h3>
@@ -83,8 +83,8 @@ export default function StrategyBreakdown() {
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0F3350] mr-4">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2v20" stroke="#4EE391" strokeWidth="1.5" strokeLinecap="round" />
-                  <path d="M5 12h14" stroke="#4EE391" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M12 2v20" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M5 12h14" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white">Real-Time Conversion</h3>

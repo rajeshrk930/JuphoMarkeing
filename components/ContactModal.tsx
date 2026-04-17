@@ -13,12 +13,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   return (
     <div 
-      className="fixed inset-0 z-50 bg-[#132A4A] overflow-y-auto"
+      className="fixed inset-0 z-50 bg-black overflow-y-auto"
     >
       {/* Close Button */}
       <button
         onClick={onClose}
-        className="fixed top-4 right-4 md:top-6 md:right-6 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#1F3A5A] hover:bg-[#0B1F3A] transition-colors"
+        className="fixed top-4 right-4 md:top-6 md:right-6 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#333333] hover:bg-[#444444] transition-colors"
         aria-label="Close modal"
       >
         <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

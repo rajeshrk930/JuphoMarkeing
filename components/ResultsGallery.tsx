@@ -1,4 +1,4 @@
-"use client";
+f"use client";
 
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
@@ -130,7 +130,7 @@ export default function ResultsGallery({ showDelete = false }: Props) {
               </div>
             )}
             {r.metric && (
-              <div className="inline-flex items-center gap-1.5 bg-gradient-to-r from-orange-500/20 to-[#00b67a]/20 border border-orange-400/30 text-orange-300 px-3 py-1.5 rounded-full text-sm font-semibold mb-3">
+              <div className="inline-flex items-center gap-1.5 bg-[#FF6A00]/20 border border-[#FF6A00]/50 text-[#FF6A00] px-3 py-1.5 rounded-full text-sm font-semibold mb-3">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>

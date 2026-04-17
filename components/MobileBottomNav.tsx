@@ -18,7 +18,7 @@ export default function MobileBottomNav({ onOpenContact }: MobileBottomNavProps)
           href="https://www.instagram.com/clickboostads.in?igsh=MWdoZXRqaGd1N2liaw=="
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-14 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 hover:scale-105 transition-transform duration-300 py-2.5"
+          className="flex items-center justify-center w-14 bg-gradient-to-br from-[#FF6A00] via-[#FF6A00] to-[#FF4500] hover:scale-105 transition-transform duration-300 py-2.5"
           aria-label="Follow us on Instagram"
         >
           <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
