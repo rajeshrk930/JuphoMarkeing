@@ -26,7 +26,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
             <img
               src="/newlogo.png"
               alt="ClickBoost Logo"
-              className="h-10 md:h-14 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
           </a>
 
