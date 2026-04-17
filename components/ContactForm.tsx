@@ -86,7 +86,7 @@ export default function ContactForm() {
               name="name"
               value={form.name}
               onChange={update}
-              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
+              className="w-full border-0 border-b-2 border-[#333333] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#999999]"
               placeholder="Your name?"
               required
             />
@@ -100,7 +100,7 @@ export default function ContactForm() {
               type="email"
               value={form.email}
               onChange={update}
-              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
+              className="w-full border-0 border-b-2 border-[#333333] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#999999]"
               placeholder="Your Email address?"
               required
             />
@@ -113,7 +113,7 @@ export default function ContactForm() {
               name="phone"
               value={form.phone}
               onChange={update}
-              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
+              className="w-full border-0 border-b-2 border-[#333333] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#999999]"
               placeholder="Your Phone Number?"
             />
           </div>
@@ -125,7 +125,7 @@ export default function ContactForm() {
               name="spend"
               value={form.spend}
               onChange={update}
-              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
+              className="w-full border-0 border-b-2 border-[#333333] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#999999]"
               placeholder="What's your budget?"
               required
             />
@@ -138,7 +138,7 @@ export default function ContactForm() {
               name="website"
               value={form.website}
               onChange={update}
-              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0]"
+              className="w-full border-0 border-b-2 border-[#333333] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#999999]"
               placeholder="Your Website?"
             />
           </div>
@@ -151,7 +151,7 @@ export default function ContactForm() {
               value={form.message}
               onChange={update}
               rows={3}
-              className="w-full border-0 border-b-2 border-[#132A4A] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#C7D0E0] resize-none"
+              className="w-full border-0 border-b-2 border-[#333333] px-0 py-3 bg-transparent focus:outline-none focus:border-brand transition-colors text-white placeholder-[#999999] resize-none"
               placeholder="Tell us about your project"
             />
           </div>

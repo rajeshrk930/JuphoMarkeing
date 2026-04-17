@@ -86,7 +86,7 @@ export default function HowItWorks() {
             <motion.div
               key={idx}
               variants={item}
-              className="group relative bg-bgCard rounded-md p-6 md:p-8 hover:bg-[#1F3A5A] transition-all duration-300 border border-[#132A4A] shadow-sm hover:shadow-md"
+              className="group relative bg-bgCard rounded-md p-6 md:p-8 hover:bg-[#2a2a2a] transition-all duration-300 border border-[#333333] shadow-sm hover:shadow-md"
               whileHover={{ y: -6 }}
             >
               {/* Vertical Accent Bar */}

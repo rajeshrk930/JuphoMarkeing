@@ -72,7 +72,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
             <div
               key={index}
               className={`relative bg-bgSection rounded-lg ${
-                pkg.popular ? 'border-2 border-[#FF7A00]' : 'border border-[#132A4A]'
+                pkg.popular ? 'border-2 border-[#FF7A00]' : 'border border-[#333333]'
               } p-6 hover:border-[#FF7A00] transition-all duration-200`}
             >
               {/* Popular Badge */}
@@ -102,7 +102,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
               <ul className="space-y-3 mb-6">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-textSecondary">
-                    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="#FF6A00" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{feature}</span>
@@ -130,23 +130,23 @@ export default function Pricing({ onOpenContact }: PricingProps) {
 
         {/* Additional Info */}
         <div className="mt-12 text-center max-w-4xl mx-auto">
-          <div className="bg-bgSection rounded-lg p-6 border border-[#132A4A]">
+          <div className="bg-bgSection rounded-lg p-6 border border-[#333333]">
             <p className="font-semibold text-white mb-4">All Packages Include:</p>
             <div className="grid md:grid-cols-3 gap-4 text-sm text-textSecondary">
               <div className="flex items-center gap-2 justify-center">
-                <svg className="w-5 h-5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="#FF6A00" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Weekly reports</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
-                <svg className="w-5 h-5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="#FF6A00" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>WhatsApp support</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
-                <svg className="w-5 h-5" fill="none" stroke="#00AEEF" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="#FF6A00" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Strategy call every 2 weeks</span>

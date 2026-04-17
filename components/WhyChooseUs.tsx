@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
           {proofCards.map((card, index) => (
             <div
               key={index}
-              className="bg-bgCard rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 border border-[#132A4A]"
+              className="bg-bgCard rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 border border-[#333333]"
             >
               <div className="text-5xl mb-4">
                 {card.icon}
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
 
         {/* Certifications */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-bgCard rounded-xl p-8 text-center flex items-center justify-center min-h-[180px] border border-[#132A4A]">
+          <div className="bg-bgCard rounded-xl p-8 text-center flex items-center justify-center min-h-[180px] border border-[#333333]">
             <img
               src="/google-partner.png"
               alt="Google Partner Badge"
@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
               loading="lazy"
             />
           </div>
-          <div className="bg-bgCard rounded-xl p-8 text-center flex items-center justify-center min-h-[180px] border border-[#132A4A]">
+          <div className="bg-bgCard rounded-xl p-8 text-center flex items-center justify-center min-h-[180px] border border-[#333333]">
             <img
               src="/meta-certified.png"
               alt="Meta Certified Badge"

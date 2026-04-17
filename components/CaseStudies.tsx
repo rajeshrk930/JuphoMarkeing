@@ -54,11 +54,11 @@ export default function CaseStudies() {
               </div>
               <p className="text-sm text-textSecondary font-medium mb-4 leading-relaxed">{s.summary}</p>
               <div className="grid grid-cols-2 gap-3 text-sm">
-                <div className="bg-bgSection rounded-md p-3 flex flex-col border border-[#132A4A]">
+                <div className="bg-bgSection rounded-md p-3 flex flex-col border border-[#333333]">
                   <span className="text-[10px] font-semibold text-textSecondary">Leads Generated</span>
                   <span className="text-xl font-bold text-[#FF7A00]">{s.leads}</span>
                 </div>
-                <div className="bg-bgSection rounded-md p-3 flex flex-col border border-[#132A4A]">
+                <div className="bg-bgSection rounded-md p-3 flex flex-col border border-[#333333]">
                   <span className="text-[10px] font-semibold text-textSecondary">Cost Per Lead</span>
                   <span className="text-xl font-bold text-[#FF7A00]">₹{s.cpl}</span>
                 </div>

@@ -14,7 +14,7 @@ type Props = {
 export default function ServiceCard({ title, benefits, icon, tint = "bg-[#E6FFFA]/20", bestFor }: Props) {
   return (
     <article
-      className="group relative bg-bgCard rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-[#132A4A] hover:-translate-y-1"
+      className="group relative bg-bgCard rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-[#333333] hover:-translate-y-1"
       aria-labelledby={`service-${title}`}
     >
       {/* subtle top accent (kept but faint) */}
@@ -23,7 +23,7 @@ export default function ServiceCard({ title, benefits, icon, tint = "bg-[#E6FFFA
       <div className="flex-1 space-y-5 mt-2">
         {/* Icon + title row */}
         <div className="flex items-start gap-4">
-          <div className="h-12 w-12 rounded-md bg-bgSection flex items-center justify-center border border-[#132A4A]">
+          <div className="h-12 w-12 rounded-md bg-bgSection flex items-center justify-center border border-[#333333]">
             <span className="inline-block">{icon}</span>
           </div>
 
