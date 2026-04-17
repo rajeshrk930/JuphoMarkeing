@@ -18,13 +18,13 @@ export default function Header({ onOpenContact }: HeaderProps) {
   };
 
   return (
-    <header className="w-full bg-[#0B1F3A] border-b border-[#132A4A] sticky top-0 z-50 shadow-lg">
+    <header className="w-full bg-black border-b border-[#333333] sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
           {/* Logo - Left */}
           <a href="/" className="flex-shrink-0">
             <img
-              src="/clickbook-finallogo.png"
+              src="/newlogo.png"
               alt="ClickBoost Logo"
               className="h-10 md:h-14 w-auto"
             />
@@ -98,7 +98,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-[#132A4A] pt-4 space-y-3">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-[#333333] pt-4 space-y-3">
             <button
               onClick={() => scrollToSection("services")}
               className="block w-full text-left text-white hover:text-[#FF7A00] transition-colors duration-200 font-medium py-2"
